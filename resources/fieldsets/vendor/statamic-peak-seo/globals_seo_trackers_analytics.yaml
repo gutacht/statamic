@@ -1,0 +1,105 @@
+title: 'Globals SEO: Trackers - Analytics'
+fields:
+  -
+    handle: use_fathom
+    field:
+      type: toggle
+      instructions: 'Add Fathom tracking code to your head.'
+      listable: false
+      display: Fathom
+      localizable: true
+  -
+    handle: fathom
+    field:
+      display: 'Site ID'
+      instructions: 'Only add the site ID.'
+      type: text
+      width: 50
+      validate:
+        - 'required_if:use_fathom,true'
+      if:
+        use_fathom: 'equals true'
+      localizable: true
+  -
+    handle: use_matomo
+    field:
+      type: toggle
+      instructions: 'Add the Matomo self hosted tag manager to your head.'
+      listable: false
+      display: Matomo
+      localizable: true
+  -
+    handle: matomo_script_url
+    field:
+      display: 'Script URL'
+      instructions: 'The Matomo tag manager script url including the container ID.'
+      type: text
+      width: 50
+      validate:
+        - 'required_if:use_matomo,true'
+      if:
+        use_matomo: 'equals true'
+      localizable: true
+  -
+    handle: use_plausible
+    field:
+      type: toggle
+      instructions: 'Add Plausible tracking code to your head.'
+      listable: false
+      display: Plausible
+      localizable: true
+  -
+    handle: plausible_use_custom_script
+    field:
+      type: toggle
+      instructions: 'For when you are you using a self hosted install or proxying the script.'
+      listable: false
+      display: 'Custom script'
+      if:
+        use_plausible: 'equals true'
+      localizable: true
+  -
+    handle: plausible
+    field:
+      display: 'Site Domain'
+      instructions: 'Specify the domain of your site you wish track visits on.'
+      type: text
+      width: 50
+      validate:
+        - 'required_if:use_plausible,true'
+      if:
+        use_plausible: 'equals true'
+      localizable: true
+  -
+    handle: plausible_custom_script_url
+    field:
+      display: 'Custom script'
+      instructions: 'Add the full script URL.'
+      input_type: url
+      type: text
+      width: 50
+      validate:
+        - 'required_if:plausible_use_custom_domain,true'
+      if:
+        use_plausible: 'equals true'
+        plausible_use_custom_script: 'equals true'
+      localizable: true
+  -
+    handle: use_cloudflare_web_analytics
+    field:
+      type: toggle
+      instructions: 'Add Cloudflare tracking code to your head.'
+      listable: false
+      display: 'Cloudflare Web Analytics'
+      localizable: true
+  -
+    handle: cloudflare_web_analytics
+    field:
+      display: 'Beacon ID'
+      width: 50
+      type: text
+      validate:
+        - 'required_if:use_cloudflare_web_analytics,true'
+      if:
+        use_cloudflare_web_analytics: 'equals true'
+      localizable: true

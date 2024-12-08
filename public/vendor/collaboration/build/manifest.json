@@ -1,0 +1,26 @@
+{
+  "resources/audio/buddy-in.mp3": {
+    "file": "assets/buddy-in-3654293a.mp3",
+    "src": "resources/audio/buddy-in.mp3"
+  },
+  "resources/audio/buddy-out.mp3": {
+    "file": "assets/buddy-out-7b1108d4.mp3",
+    "src": "resources/audio/buddy-out.mp3"
+  },
+  "resources/js/collaboration.css": {
+    "file": "assets/collaboration-f7e58cac.css",
+    "src": "resources/js/collaboration.css"
+  },
+  "resources/js/collaboration.js": {
+    "assets": [
+      "assets/buddy-in-3654293a.mp3",
+      "assets/buddy-out-7b1108d4.mp3"
+    ],
+    "css": [
+      "assets/collaboration-f7e58cac.css"
+    ],
+    "file": "assets/collaboration-df9994a0.js",
+    "isEntry": true,
+    "src": "resources/js/collaboration.js"
+  }
+}

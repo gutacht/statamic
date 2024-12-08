@@ -1,0 +1,13 @@
+{{#
+    @name Article
+    @desc The article page builder block. It extends the prose typography partial.
+    @set page.page_builder.article
+#}}
+
+<!-- /page_builder/_article.antlers.html -->
+{{ partial:page_builder/block }}
+    {{ partial:typography/prose as="article" class="contents" }}
+        {{ bard_partial :blocks="article | raw" }}
+    {{ /partial:typography/prose }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_article.antlers.html -->

@@ -1,0 +1,16 @@
+{{#
+    @name BulletList
+    @desc The typography bulletlist partial to render an unordered list with `class`, `as`, `color` and `content` attributes.
+    @param* content The ul elements.
+    @param as The wrapping element. Defaults to `ul`.
+    @param color Set a custom text color utility. Falls back to `text-neutral`.
+    @param class Add custom CSS classes.
+#}}
+
+<!-- /typography/_ul.antlers.html -->
+<{{ as or 'ul' }} class="mt-0 mb-8 last:mb-0 leading-relaxed {{ color or 'text-neutral' }} {{ class }}">
+    {{ content }}
+        <li>{{ content:0:content:0:text | nl2br }}</li>
+    {{ /content }}
+</{{ as or 'ul' }}>
+<!-- End: /typography/_ul.antlers.html -->

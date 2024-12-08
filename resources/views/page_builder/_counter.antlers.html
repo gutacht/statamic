@@ -1,0 +1,11 @@
+{{#
+    @name Counter
+    @desc The counter page builder block. It supports multiple counters.
+    @set page.page_builder.counter
+#}}
+
+{{ partial:page_builder/block }}
+    {{ partial:page_builder/container }}
+        {{ title ?= {partial:typography:heading as="{title_tag or 'h2'}" :content="title"} }}
+    {{ /partial:page_builder/container }}
+{{ /partial:page_builder/block }}

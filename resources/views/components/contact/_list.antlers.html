@@ -1,0 +1,20 @@
+{{#
+    @name Contact List
+    @desc Displays a list of contact items.
+    @param show Boolean to show or hide the contact list. Defaults to true.
+    @param class Additional classes for the element.
+#}}
+
+{{ if {show or true} }}
+    <div class="flex w-fit flex-col {{ class }}">
+        {{ partial:components/contact/item
+            :contact="phone ?? contact:phone"
+        }}
+
+        {{ partial:components/contact/item
+            :contact="mobile ?? contact:mobile"
+            label="{trans:contact_mobile}"
+            icon="contact/mobile"
+        }}
+    </div>
+{{ /if }}

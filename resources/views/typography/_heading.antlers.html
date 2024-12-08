@@ -1,0 +1,14 @@
+{{#
+    @name Heading
+    @desc The typography heading partial to render a heading of different size and shape.
+    @param* content The heading content.
+    @param as The wrapping element. Defaults to `h2`.
+    @param color Set a custom text color utility. Falls back to `text-neutral`.
+    @param class Add custom CSS classes.
+#}}
+
+<!-- /typography/_heading.antlers.html -->
+<{{ as or 'h2' }} class="text-heading [&_strong]:text-primary {{ color or 'text-neutral' }} {{ class }}">
+    {{ content | nl2br }}
+</{{ as or 'h2' }}>
+<!-- End: /typography/_heading.antlers.html -->

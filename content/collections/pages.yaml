@@ -1,0 +1,18 @@
+title: Seiten
+sites:
+  - gutachterix
+  - immo
+propagate: false
+template: default
+layout: layout
+revisions: false
+route: '{parent_uri}/{slug}'
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: false
+structure:
+  root: true
+  slugs: true

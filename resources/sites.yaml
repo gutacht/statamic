@@ -1,0 +1,8 @@
+gutachterix:
+  name: '{{ config:app:name }}'
+  url: /
+  locale: de_DE
+immo:
+  name: Clever-Immo
+  url: /immo
+  locale: de_DE

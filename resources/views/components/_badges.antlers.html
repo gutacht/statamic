@@ -1,0 +1,32 @@
+{{#
+    @name Review Badges
+    @desc Google and ProvenExpert reviews.
+#}}
+
+<div class="span-content flex flex-row flex-wrap items-center gap-6">
+    <div class="flex w-fit items-center rounded-sm border-t-4 border-solid border-[#4fce6a] bg-white p-3 antialiased shadow-md">
+        <div class="logo" data-svelte-h="svelte-1dkkp1a">
+            {{ svg src="google/logo" width="44px" height="44px" }}
+        </div>
+
+        <div class="ml-2">
+            <div class="text-sm">
+                {{ trans:reviews_google }}
+            </div>
+            <div class="flex">
+                <div class="score mr-2 text-xl text-[#e7711b]">
+                    {{ reviews:google }}
+                </div>
+                <div class="stars flex items-center">
+                    {{ loop times="5" }}
+                        {{ svg src="google/star" width="18px" height="18px" class="mr-1" }}
+                    {{ /loop }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="proven_expert h-40 w-40">
+        {{ partial:statamic-peak-tools::components/picture :image="reviews:provenexpert" lazy="true" }}
+    </div>
+</div>

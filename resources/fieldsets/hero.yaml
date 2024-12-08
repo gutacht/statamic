@@ -1,0 +1,51 @@
+title: Hero
+fields:
+  -
+    import: heading
+  -
+    handle: show_contact
+    field:
+      default: true
+      type: toggle
+      display: 'Kontakt einblenden'
+      localizable: true
+      width: 50
+      replicator_preview: false
+  -
+    handle: show_badges
+    field:
+      default: true
+      type: toggle
+      display: 'Badges einblenden'
+      localizable: true
+      width: 50
+      replicator_preview: false
+  -
+    handle: layout
+    field:
+      options:
+        -
+          key: background
+          value: 'Bild als Hintergrund'
+        -
+          key: next
+          value: 'Bild neben Inhalt'
+      default: background
+      type: select
+      display: Layout
+      localizable: false
+      validate:
+        - required
+      replicator_preview: false
+  -
+    handle: image
+    field:
+      max_files: 1
+      mode: grid
+      container: images
+      type: assets
+      display: Bild
+      localizable: true
+      validate:
+        - required
+      replicator_preview: false
