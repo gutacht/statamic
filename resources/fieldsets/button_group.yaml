@@ -1,0 +1,49 @@
+title: Button-Gruppe
+fields:
+  -
+    handle: buttons
+    field:
+      type: group
+      display: Buttons
+      localizable: false
+      replicator_preview: false
+      fullscreen: false
+      fields:
+        -
+          handle: buttons
+          field:
+            collapse: true
+            max_sets: 2
+            fullscreen: false
+            button_label: 'Button hinzufügen'
+            type: replicator
+            display: Buttons
+            localizable: false
+            hide_display: true
+            sets:
+              button:
+                display: Button
+                sets:
+                  button:
+                    display: Button
+                    fields:
+                      -
+                        import: button
+        -
+          handle: align
+          field:
+            options:
+              -
+                key: justify-start
+                value: Links
+              -
+                key: justify-center
+                value: Mittig
+              -
+                key: justify-end
+                value: Rechts
+            default: justify-center
+            type: button_group
+            display: Ausrichtung
+            localizable: false
+            replicator_preview: false

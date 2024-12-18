@@ -1,12 +1,26 @@
+---
+class: null
+---
+
 {{#
     @name Contact List
     @desc Displays a list of contact items.
-    @param show Boolean to show or hide the contact list. Defaults to true.
+    @param bg Show a background for each item.
+    @param dir Direction of the contact list.
     @param class Additional classes for the element.
 #}}
 
-{{ if {show or true} }}
-    <div class="flex w-fit flex-col {{ class }}">
+{{ if (layout == 'hero' && (page:id == 'home' || page:collection == 'locations')) || layout != 'hero' }}
+    <div
+        class="
+            flex span-content flex-col
+            {{ switch(
+                (layout == 'hero') => 'w-fit',
+                () => 'sm:flex-row sm:gap-x-20'
+            ) }}
+            {{ view:class }}
+        "
+    >
         {{ partial:components/contact/item
             :contact="phone ?? contact:phone"
         }}
@@ -14,7 +28,7 @@
         {{ partial:components/contact/item
             :contact="mobile ?? contact:mobile"
             label="{trans:contact_mobile}"
-            icon="contact/mobile"
+            icon="icons/contact/mobile"
         }}
     </div>
 {{ /if }}

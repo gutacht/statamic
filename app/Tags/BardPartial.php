@@ -24,7 +24,7 @@ class BardPartial extends Partial
 
             switch ($block['type']) {
                 case 'heading':
-                    $this->bardText .= $this->renderView("typography/h{$attrs['level']}", ['content' => $content[0]['text']]);
+                    $this->bardText .= $this->renderView("typography/heading", ['as' => 'h'.$attrs['level'], 'heading' => $content[0]['text']]);
                     break;
                 case 'paragraph':
                     $this->bardText .= $this->renderView('typography/p', ['content' => $content[0]['text']]);
@@ -32,10 +32,10 @@ class BardPartial extends Partial
                 case 'bulletList':
                     $this->bardText .= $this->renderView('typography/ul', ['content' => $content]);
                     break;
-                case 'set':
-                    $this->renderText();
-                    $this->bardHtml .= $this->renderView("components/{$attrs['values']['type']}", [...$attrs['values']]);
-                    break;
+                // case 'set':
+                //     $this->renderText();
+                //     $this->bardHtml .= $this->renderView("components/{$attrs['values']['type']}", [...$attrs['values']]);
+                //     break;
             }
 
             if ($key === array_key_last($blocks)) {

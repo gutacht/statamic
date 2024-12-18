@@ -1,0 +1,15 @@
+{{#
+    @name Contact
+    @desc Displays contact info.
+    @set page.page_builder.contact
+#}}
+
+<!-- /page_builder/_contact.antlers.html -->
+{{ partial:page_builder/block class="py-4 {{ layout == 'col' ? 'bg-gray-50 stack-space-collapse' : 'lg:py-10' }}" }}
+    <div class="flex span-content items-center justify-center flex-col gap-4 {{ layout == 'col' ? '' : 'lg:flex-row lg:gap-12' }}">
+        {{ partial:typography/richtext class="{{ layout == 'col' ? '' : 'lg:max-w-[320px] [&_.lead]:lg:text-[1.625rem] [&_.lead]:lg:leading-[1.95rem]' }}" }}
+
+        {{ partial:components/contact/list gap="gap-x-[80px]" }}
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_contact.antlers.html -->

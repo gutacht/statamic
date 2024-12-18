@@ -1,0 +1,10 @@
+title: Icon
+fields:
+  -
+    handle: icon
+    field:
+      type: icon
+      display: Icon
+      localizable: false
+      directory: public/icons
+      replicator_preview: false

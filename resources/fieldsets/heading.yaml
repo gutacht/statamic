@@ -3,60 +3,15 @@ fields:
   -
     handle: heading
     field:
+      buttons:
+        - bold
+      smart_typography: true
+      inline: break
+      toolbar_mode: floating
       fullscreen: false
-      type: group
+      allow_source: false
+      remove_empty_nodes: true
+      type: bard
       display: Überschrift
       localizable: true
-      sortable: false
-      fields:
-        -
-          handle: text
-          field:
-            buttons:
-              - bold
-            smart_typography: true
-            inline: break
-            toolbar_mode: floating
-            fullscreen: false
-            allow_source: false
-            remove_empty_nodes: true
-            type: bard
-            display: Text
-            localizable: false
-        -
-          handle: tag
-          field:
-            options:
-              -
-                key: h1
-                value: H1
-              -
-                key: h2
-                value: H2
-              -
-                key: h3
-                value: H3
-            default: h2
-            type: button_group
-            display: Element
-            localizable: false
-            replicator_preview: false
-            width: 50
-        -
-          handle: style
-          field:
-            options:
-              -
-                key: left
-                value: Links
-              -
-                key: center
-                value: Zentriert
-            default: left
-            type: button_group
-            display: Stil
-            localizable: false
-            width: 50
-            replicator_preview: false
-            unless:
-              tag: 'equals h3'
+      collapse: true

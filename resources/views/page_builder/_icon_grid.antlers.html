@@ -1,0 +1,21 @@
+{{#
+    @name Icon Grid
+    @desc A grid of text with an icon.
+    @set page.page_builder.icon_grid
+#}}
+
+<!-- /page_builder/_icon_grid.antlers.html -->
+{{ partial:page_builder/block }}
+    {{ partial:typography/heading }}
+    {{ partial:typography/richtext }}
+
+    {{ partial:components/grid width="520px" }}
+        {{ grid }}
+            <div class="flex flex-col justify-start gap-4 sm:flex-row">
+                {{ svg :src="icon" width="65px" height="65px" class="shrink-0" }}
+                {{ partial:typography/richtext }}
+            </div>
+        {{ /grid }}
+    {{ /partial:components/grid }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_icon_grid.antlers.html -->

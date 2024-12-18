@@ -1,11 +1,32 @@
 /* If you don't want to use the JS in CSS syntax from `tailwind.config.site.js` you can add your own custom CSS here. Use different layers to make sure your CSS either get's purged or not: https://tailwindcss.com/docs/functions-and-directives#layer. CSS in the base layer won't get purged. */
 
 @layer base {
+    .button:not(p),
+    .button > a {
+        @apply w-fit uppercase bg-primary hover:text-primary font-display py-2 px-5 rounded hover:bg-white text-white font-bold !no-underline transition-all;
+    }
 }
 
 @layer components {
     .text-heading {
         @apply font-display text-2xl font-bold md:text-3xl lg:text-[2.5rem] lg:leading-[3.5rem];
+    }
+
+    .bg-opacity {
+        @apply bg-black bg-opacity-80;
+    }
+
+	.list-success,
+	.list-error {
+		@apply [&_li]:list-none [&_li]:pl-5 [&_li::before]:content-[''] [&_li::before]:shrink-0 [&_li]:relative [&_li::before]:absolute [&_ul]:pl-0;
+	}
+    .list-success li::before {
+        @apply bg-success h-4 w-4 top-1 left-0;
+        mask: url('/icons/misc/check.svg') no-repeat;
+    }
+    .list-error li::before {
+        @apply bg-error h-6 w-6 -left-1;
+        mask: url('/icons/misc/cross.svg') no-repeat;
     }
 }
 

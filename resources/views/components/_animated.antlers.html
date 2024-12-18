@@ -1,0 +1,152 @@
+---
+class: null
+---
+
+{{#
+    @name Animated
+    @desc Different animated components.
+    @param animated The animated dictionary.
+    @param class Add custom class names.
+#}}
+
+{{ if animated:type == 'counter' }}
+    <div
+        class="{{ view:class }}"
+        x-data="counter({{ animated:counter:start }}, {{ animated:counter:end }}, {{ animated:duration }})"
+        x-intersect="start()"
+    >
+        {{ if animated:counter:prepend }}
+            <span class="prepend">{{ animated:counter:prepend }}</span>
+        {{ /if }}
+
+        <span class="number" x-text="Math.round(current)"></span>
+
+        {{ if animated:counter:append }}
+            <span class="append">{{ animated:counter:append }}</span>
+        {{ /if }}
+    </div>
+
+    {{ once }}
+        {{ push:scripts }}
+            <script>
+                function counter(start, end, duration = 2000) {
+                    return {
+                        current: parseInt(start, 10),
+                        target: parseInt(end, 10),
+                        duration: parseInt(duration, 10),
+                        start() {
+                            const startTime = Date.now();
+                            const initialValue = this.current;
+                            const diff = this.target - initialValue;
+
+                            const animate = () => {
+                                const elapsedTime = Date.now() - startTime;
+                                const progress = Math.min(elapsedTime / this.duration, 1);
+                                this.current = initialValue + diff * progress;
+
+                                if (progress < 1) {
+                                requestAnimationFrame(animate);
+                                }
+                            };
+
+                            requestAnimationFrame(animate);
+                        }
+                    };
+                }
+            </script>
+        {{ /push:scripts }}
+    {{ /once }}
+{{ elseif animated:type == 'typewriter' }}
+    {{ if animated:typewriter:effect == 'swirl' }}
+        <div
+            x-data="swirl({{ animated:typewriter:words | length }}, {{ animated:typewriter:loop or 'false' }}, {{ animated:duration or '2000' }})"
+            class="relative {{ class }}"
+        >
+            {{ animated:typewriter:words }}
+                {{ words_index = index }}
+                <span class="absolute flex w-full justify-center left-0 top-0">
+                    {{ loop :times="text | length" }}
+                        <span class="letter" :class="currentWord === {{ words_index }} ? 'animate-in' : ''">
+                            {{ text | substr({ value | subtract(1) }, 1) }}
+                        </span>
+                    {{ /loop }}
+                </span>
+            {{ /animated:typewriter:words }}
+        </div>
+
+        {{ once }}
+            {{ push:styles }}
+                <style>
+                    .letter {
+                        opacity: 0;
+                        transform: translateZ(-20px) rotateX(90deg);
+                        transform-style: preserve-3d;
+                        backface-visibility: hidden;
+                    }
+
+                    .letter:not(.animate-in) {
+                        animation: swirl-out .4s forwards;
+                    }
+
+                    .letter.animate-in {
+                        animation: swirl-in .4s forwards;
+                    }
+
+                    @keyframes swirl-in {
+                        0% {
+                            opacity: 0;
+                            transform: translateZ(-20px) rotateX(90deg)
+                        }
+
+                        60% {
+                            opacity: 1;
+                            transform: translateZ(-20px) rotateX(-10deg)
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateZ(-20px) rotateX(0deg)
+                        }
+                    }
+
+                    @keyframes swirl-out {
+                        0% {
+                            opacity: 1;
+                            transform: translateZ(-20px) rotateX(0)
+                        }
+
+                        60% {
+                            opacity: 0;
+                            transform: translateZ(-20px) rotateX(-100deg)
+                        }
+
+                        to {
+                            opacity: 0;
+                            transform: translateZ(-20px) rotateX(-90deg)
+                        }
+                    }
+                </style>
+            {{ /push:styles }}
+
+            {{ push:scripts }}
+                <script>
+                    document.addEventListener('alpine:init', () => {
+                        Alpine.data('swirl', (wordsLength, loop, duration) => ({
+                            currentWord: 0,
+                            intervalId: null,
+                            init() {
+                                this.intervalId = setInterval(() => {
+                                    this.currentWord = (this.currentWord + 1) % wordsLength
+
+                                    if (!loop && this.currentWord === wordsLength - 1) {
+                                        clearInterval(this.intervalId)
+                                    }
+                                }, duration);
+                            }
+                        }))
+                    })
+                </script>
+            {{ /push:scripts }}
+        {{ /once }}
+    {{ /if }}
+{{ /if }}

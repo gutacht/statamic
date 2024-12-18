@@ -1,0 +1,16 @@
+---
+class: null
+---
+
+{{#
+    @name Accordions
+    @desc Loop to render multiple accordions.
+#}}
+
+<!-- /components/_accordions.antlers.html -->
+<div x-data="{ active: null }" class="{{ span or 'span-content' }} {{ view:class }}">
+    {{ accordions }}
+        {{ partial:components/accordion }}
+    {{ /accordions }}
+</div>
+<!-- End: /components/_accordions.antlers.html -->

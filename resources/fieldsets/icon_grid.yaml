@@ -1,0 +1,22 @@
+title: Icon-Grid
+fields:
+  - import: heading
+  - import: richtext
+  - handle: grid
+    field:
+      collapse: true
+      max_sets: 4
+      button_label: "Zum Raster hinzufügen"
+      type: replicator
+      display: Grid
+      localizable: false
+      replicator_preview: false
+      sets:
+        icons:
+          display: Icons
+          sets:
+            icon:
+              display: Icon
+              fields:
+                - import: icon
+                - import: richtext

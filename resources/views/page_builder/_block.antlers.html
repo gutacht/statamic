@@ -1,8 +1,12 @@
+---
+class: null
+---
+
 {{#
 	@name Page builder block
 	@desc The page builder block wrapper
 #}}
 
-<{{ as or 'section' }} class="fluid-grid {{ class }}">
+<{{ as or 'section' }} class="fluid-grid {{ space or 'stack-6' }} {{ view:class }}">
     {{ slot }}
 </{{ as or 'section' }}>

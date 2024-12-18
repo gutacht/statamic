@@ -18,12 +18,17 @@ export default defineConfig(({ command, mode }) => {
                 refresh: true,
                 input: [
                     'resources/css/site.css',
-                    'resources/js/site.js',
+                    'resources/js/site.js'
                 ]
             })
         ],
         server: {
             open: env.APP_URL
-        }
+        },
+        resolve: {
+            alias: {
+                '/icons': '/public/icons',
+            },
+        },
     }
 });

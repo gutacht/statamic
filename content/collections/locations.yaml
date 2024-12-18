@@ -5,9 +5,10 @@ sites:
 propagate: false
 template: default
 layout: layout
+mount: b6b2eed9-03dc-404b-9daf-3115dfc9c7fa
 revisions: false
 route:
-  gutachterix: '/kfz-gutachten/{slug}'
+  gutachterix: '/{mount}/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

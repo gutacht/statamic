@@ -1,6 +1,22 @@
 title: 'Page Builder'
 fields:
   -
+    handle: hero
+    field:
+      fullscreen: false
+      type: group
+      display: Hero
+      localizable: false
+      replicator_preview: false
+      validate:
+        - required
+      instructions: 'Erste Sektion des Eintrags mit H1-Überschrift. Layout unterscheidet sich bei Standorten. Kontakt und Siegel werden bei allen Seiten außer der Startseite ausgeblendet.'
+      fields:
+        -
+          import: heading
+        -
+          import: image
+  -
     handle: page_builder
     field:
       type: replicator
@@ -11,6 +27,169 @@ fields:
       display: 'Page Builder'
       button_label: 'Add block'
       sets:
+        text:
+          display: Text
+          instructions: 'Text based blocks.'
+          icon: text-formatting-initial-letter
+          sets:
+            icon_grid:
+              display: Icon-Raster
+              fields:
+                -
+                  import: heading
+                -
+                  import: richtext
+                -
+                  handle: grid
+                  field:
+                    collapse: true
+                    max_sets: 4
+                    button_label: 'Zum Raster hinzufügen'
+                    type: replicator
+                    display: Grid
+                    localizable: false
+                    replicator_preview: false
+                    sets:
+                      icons:
+                        display: Icons
+                        sets:
+                          icon:
+                            display: Icon
+                            fields:
+                              -
+                                import: icon
+                              -
+                                import: richtext
+            podium:
+              display: Podium
+              icon: hierarchy-vertical-nav-flow
+              fields:
+                -
+                  import: heading
+                -
+                  import: richtext
+                -
+                  handle: grid
+                  field:
+                    collapse: true
+                    type: replicator
+                    display: Grid
+                    localizable: false
+                    replicator_preview: false
+                    max_sets: 3
+                    button_label: 'Platz hinzufügen'
+                    sets:
+                      rank:
+                        display: Rang
+                        sets:
+                          rank:
+                            display: Rang
+                            fields:
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Titel
+                                  localizable: false
+                              -
+                                import: image
+                              -
+                                import: heading
+                              -
+                                import: richtext
+                -
+                  handle: edit_accordion
+                  field:
+                    type: revealer
+                    display: Akkordeon
+                    localizable: false
+                    replicator_preview: false
+                    input_label: Bearbeiten
+                -
+                  handle: accordion
+                  field:
+                    border: false
+                    type: group
+                    display: Akkordeon
+                    localizable: false
+                    replicator_preview: false
+                    if:
+                      edit_accordion: 'equals true'
+                    fields:
+                      -
+                        handle: button_open
+                        field:
+                          type: text
+                          display: 'Button (öffnen)'
+                          localizable: false
+                          width: 50
+                          replicator_preview: false
+                          validate:
+                            - required
+                      -
+                        handle: button_close
+                        field:
+                          type: text
+                          display: 'Button (schließen)'
+                          localizable: false
+                          width: 50
+                          replicator_preview: false
+                      -
+                        import: richtext
+        media:
+          display: Medien
+          instructions: 'Diverse Medienelemente.'
+          icon: media-image-picture-gallery
+          sets:
+            image:
+              display: Bild
+              icon: media-image-photo-focus-frame
+              fields:
+                -
+                  import: image
+                -
+                  import: richtext
+            image_accordions:
+              display: Bilder-Akkordeons
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: heading
+                -
+                  import: richtext
+                -
+                  handle: grid
+                  field:
+                    collapse: true
+                    max_sets: 6
+                    type: replicator
+                    display: Raster
+                    localizable: false
+                    replicator_preview: false
+                    sets:
+                      accordions:
+                        display: Akkordeons
+                        sets:
+                          accordion:
+                            display: Akkordeon
+                            fields:
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: TItel
+                                  localizable: false
+                              -
+                                import: richtext
+                              -
+                                handle: image
+                                field:
+                                  max_files: 1
+                                  container: images
+                                  type: assets
+                                  display: Bild
+                                  localizable: false
+                                  replicator_preview: false
         interactive:
           display: Interactive
           instructions: 'Interactive blocks.'
@@ -23,32 +202,99 @@ fields:
               fields:
                 -
                   import: form
-            cards:
-              display: Cards
-              instructions: 'Show linkable cards with text.'
-              icon: link
+            counter:
+              display: Zähler
+              icon: shopping-store-discount-percent
               fields:
                 -
-                  import: cards
-        text:
-          display: Text
-          instructions: 'Text based blocks.'
-          icon: text-formatting-initial-letter
-          sets:
-            article:
-              display: Article
-              instructions: 'Long form content, can be expanded with media like figures, video, quotes or tables.'
-              icon: text-formatting-image-bottom
+                  import: heading
+                -
+                  handle: grid
+                  field:
+                    type: replicator
+                    display: Raster
+                    localizable: false
+                    replicator_preview: false
+                    mode: stacked
+                    fullscreen: false
+                    collapse: true
+                    max_sets: 3
+                    button_label: 'Zum Raster hinzufügen'
+                    sets:
+                      counters:
+                        display: Zähler
+                        sets:
+                          counter:
+                            display: Zähler
+                            fields:
+                              -
+                                import: icon
+                              -
+                                import: animiert
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Titel
+                                  localizable: false
+                              -
+                                import: richtext
+                -
+                  handle: edit_accordion
+                  field:
+                    type: revealer
+                    display: Akkordeon
+                    localizable: false
+                    replicator_preview: false
+                    input_label: Bearbeiten
+                -
+                  handle: accordion
+                  field:
+                    border: false
+                    type: group
+                    display: Akkordeon
+                    localizable: false
+                    replicator_preview: false
+                    if:
+                      edit_accordion: 'equals true'
+                    fields:
+                      -
+                        handle: button_open
+                        field:
+                          type: text
+                          display: 'Button (öffnen)'
+                          localizable: false
+                          width: 50
+                          replicator_preview: false
+                          validate:
+                            - required
+                      -
+                        handle: button_close
+                        field:
+                          type: text
+                          display: 'Button (schließen)'
+                          localizable: false
+                          width: 50
+                          replicator_preview: false
+                      -
+                        import: richtext
+            contact:
+              display: Kontakt
               fields:
                 -
-                  import: article
-        header:
-          display: Header
-          icon: layout-header
-          sets:
-            hero:
-              display: Hero
-              icon: layout-header
-              fields:
+                  import: richtext
                 -
-                  import: hero
+                  handle: layout
+                  field:
+                    options:
+                      -
+                        key: row
+                        value: Reihe
+                      -
+                        key: col
+                        value: Spalte
+                    default: row
+                    type: button_group
+                    display: Layout
+                    localizable: false
+                    replicator_preview: false

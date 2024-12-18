@@ -1,0 +1,66 @@
+{{#
+	@name Podium
+	@desc A grid of ranks.
+#}}
+
+{{ partial:page_builder/block }}
+    {{ partial:typography/heading }}
+    {{ partial:typography/richtext }}
+
+    {{ partial:components/grid width="330px" gap="gap-2" }}
+        {{ grid }}
+            <div
+                class="
+                    flex min-h-[400px] flex-col items-center gap-4 border-[5px] pt-4 lg:row-start-1
+                    {{ switch(
+                        (index == 0) => 'lg:col-start-2 lg:col-end-2 border-success',
+                        (index == 1) => 'lg:col-start-1 lg:col-end-1 lg:mt-10 border-error',
+                        (index == 2) => 'lg:col-start-3 lg:col-end-3 lg:mt-20 border-error'
+                    ) }}
+                ">
+                <div class="text-xl font-semibold text-[#464646] font-display">
+                    {{ trans:rank }} {{ index+1 }}
+                </div>
+
+                <div class="text-center text-lg font-semibold">
+                    {{ title }}
+                </div>
+
+                <div class="grid items-end">
+                    {{ partial:components/image cover="true" class="row-start-1 max-h-[200px] overflow-hidden" }}
+
+                    <div class="row-start-1 span-full flex flex-col gap-2 h-full items-center justify-end bg-[#00000080]">
+                        {{ if index == 0 }}
+                            {{ svg src="icons/misc/thumbs-up" width="80px" height="80px" class="fill-success" }}
+                        {{ else }}
+                            {{ svg src="icons/misc/thumbs-down" width="80px" height="80px" class="fill-error" }}
+                        {{ /if }}
+
+                        {{ partial:typography/heading
+                            as="h3"
+                            class="
+                                text-center text-white
+                                {{ switch(
+                                    (index == 0) => '[&_strong]:text-success',
+                                    (index > 0) => '[&_strong]:text-error'
+                                ) }}
+                            "
+                        }}
+                    </div>
+                </div>
+
+                {{ partial:typography/richtext
+                    class="
+                        px-2 pb-2
+                        {{ switch(
+                            (index == 0) => 'list-success',
+                            (index > 0) => 'list-error'
+                        ) }}
+                    "
+                }}
+            </div>
+        {{ /grid }}
+    {{ /partial:components/grid }}
+
+    {{ partial:components/accordion up="true" class="span-content items-center [&>div]:gap-6 [&_button]:button" }}
+{{ /partial:page_builder/block }}

@@ -1,0 +1,37 @@
+{{#
+    @name Hero
+    @desc The hero page builder block. It has multiple layouts.
+    @set page.page_builder.hero
+#}}
+
+<!-- /page_builder/_hero.antlers.html -->
+{{ if page:collection == 'locations' }}
+    {{ partial:page_builder/block as="header" }}
+        <div class="flex flex-col justify-center span-content lg:flex-row gap-4">
+            <div class="lg:w-2/3">
+                {{ partial:components/image :image="hero:image" cover="true" class="h-full" }}
+            </div>
+
+            <div class="flex flex-wrap lg:flex-col lg:justify-center gap-4 lg:w-1/3">
+                {{ partial:components/contact/list layout="hero" class="xl:w-[405px] lg:[&_a]:pr-4" }}
+
+                {{ partial:components/badges }}
+            </div>
+        </div>
+    {{ /partial:page_builder/block }}
+{{ else }}
+    {{ partial:page_builder/block as="header" }}
+        {{ partial:components/image :image="hero:image" cover="true" class="row-start-1 h-[550px]" }}
+
+        <div class="flex flex-col row-start-1 justify-center gap-4 span-content">
+            {{ partial:typography/heading :heading="hero:heading" as="h1" class="text-white bg-opacity p-6 w-fit" }}
+
+            {{ partial:components/contact/list layout="hero" }}
+        </div>
+    {{ /partial:page_builder/block }}
+
+    {{ partial:page_builder/block class="!-mt-8 sm:!-mt-16" :when="page:id == 'home'" }}
+        {{ partial:components/badges }}
+    {{ /partial:page_builder/block }}
+{{ /if }}
+<!-- End: /page_builder/_hero.antlers.html -->

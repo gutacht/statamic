@@ -5,7 +5,25 @@
 #}}
 
 {{ partial:page_builder/block }}
-    {{ partial:page_builder/container }}
-        {{ title ?= {partial:typography:heading as="{title_tag or 'h2'}" :content="title"} }}
-    {{ /partial:page_builder/container }}
+    {{ partial:typography/heading }}
+
+    {{ partial:components/grid width="320px" }}
+        {{ grid }}
+            <div class="flex flex-col">
+                <div class="border-[1px] border-b-0 border-solid border-[#A5A2A2] px-4 py-10 text-center">
+                    {{ svg :src="icon" height="50px" class="m-auto mb-4 fill-primary" }}
+
+                    {{ partial:components/animated class="flex justify-center items-center text-7xl font-semibold font-display h-20" }}
+
+                    <div class="text-2xl font-medium">
+                        {{ title }}
+                    </div>
+                </div>
+
+                {{ partial:typography/richtext class="flex h-full flex-col justify-center bg-primary p-3 text-center font-normal [&_*]:text-white" }}
+            </div>
+        {{ /grid }}
+    {{ /partial:components/grid }}
+
+    {{ partial:components/accordion up="true" class="span-content items-center [&>div]:gap-6 [&_button]:button" }}
 {{ /partial:page_builder/block }}

@@ -1,11 +1,24 @@
 nav:
   content:
-    'content::assets':
-      action: '@modify'
-      reorder: true
-      children:
-        'content::assets::images': '@inherit'
-        'content::assets::files': '@inherit'
-        'content::assets::social_images': '@inherit'
+    reorder:
+      - 'content::collections'
+      - 'content::navigation'
+      - 'content::assets'
+    items:
+      'content::assets':
+        reorder:
+          - 'content::assets::images'
+          - 'content::assets::files'
+          - 'content::assets::social_images'
+        action: '@modify'
+  fields:
+    reorder:
+      - page_builder
+    items:
+      'fields::page_builder':
+        action: '@create'
+        display: 'Page Builder'
+        url: fields/fieldsets/page_builder/edit
+        icon: replicator
 locale: de
 favorites: {  }

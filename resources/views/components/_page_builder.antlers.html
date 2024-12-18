@@ -1,0 +1,10 @@
+{{#
+    @name Page Builder
+    @desc Renders the replicator blocks to build a page.
+#}}
+
+<!-- /components/_page_builder.antlers.html -->
+{{ page_builder scope="block" }}
+    {{ partial src="page_builder/{type}" }}
+{{ /page_builder }}
+<!-- End: /components/_page_builder.antlers.html -->

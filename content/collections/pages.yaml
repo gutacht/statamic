@@ -10,8 +10,12 @@ route: '{parent_uri}/{slug}'
 sort_dir: asc
 preview_targets:
   -
-    label: Entry
+    label: Seite
     url: '{permalink}'
+    refresh: false
+  -
+    label: Standort
+    url: /kfz-gutachten/dachau
     refresh: false
 structure:
   root: true

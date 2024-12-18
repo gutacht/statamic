@@ -1,0 +1,39 @@
+title: Fließtext
+fields:
+  -
+    handle: richtext
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - lead
+        - button
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - alignleft
+        - aligncenter
+        - alignright
+      smart_typography: true
+      remove_empty_nodes: true
+      type: bard
+      display: Fließtext
+      localizable: true
+      collapse: true
+      sets:
+        text:
+          display: Text
+          icon: text-formatting-initial-letter
+          sets:
+            buttons:
+              display: Buttons
+              fields:
+                -
+                  import: button_group

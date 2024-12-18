@@ -7,9 +7,15 @@
 #}}
 
 {{ if contact }}
-    <a href="{{ protocol or 'tel' }}:{{ contact }}" class="flex bg-black bg-opacity-80 no-underline items-center gap-2 py-1 text-white px-2 pr-8 first:pb-1 first:pt-2 last:pb-2 last:pt-1">
+    <a
+        href="{{ protocol or 'tel' }}:{{ contact }}"
+        class="
+            flex no-underline items-center gap-2
+            {{ layout == 'hero' ? 'bg-black bg-opacity-80 text-white py-1 px-2 pr-8 first:pb-1 first:pt-2 last:pb-2 last:pt-1' : '' }}
+        "
+    >
         <div class="rounded bg-primary p-1">
-            {{ svg src="{icon or 'contact/phone'}" width="40px" height="40px" }}
+            {{ svg src="{icon or 'icons/contact/phone'}" width="40px" height="40px" class="fill-white" }}
         </div>
         <div class="flex flex-col text-2xl font-semibold leading-none">
             {{ label or {trans:contact_phone} }}

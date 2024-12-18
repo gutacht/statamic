@@ -1,0 +1,131 @@
+title: Animiert
+fields:
+  -
+    handle: animated
+    field:
+      type: group
+      display: Animiert
+      localizable: false
+      replicator_preview: false
+      fields:
+        -
+          handle: type
+          field:
+            options:
+              -
+                key: counter
+                value: Zähler
+              -
+                key: typewriter
+                value: Schreibmachine
+            type: select
+            display: Typ
+            localizable: false
+            replicator_preview: false
+            width: 50
+        -
+          handle: duration
+          field:
+            append: ms
+            type: integer
+            display: Dauer
+            localizable: false
+            width: 50
+            replicator_preview: false
+            placeholder: '2000'
+        -
+          handle: counter
+          field:
+            type: group
+            display: Zähler
+            localizable: false
+            replicator_preview: false
+            if:
+              type: 'equals counter'
+            fullscreen: false
+            border: false
+            fields:
+              -
+                handle: start
+                field:
+                  type: text
+                  display: Start
+                  localizable: false
+                  width: 50
+                  replicator_preview: false
+              -
+                handle: end
+                field:
+                  type: text
+                  display: Ende
+                  localizable: false
+                  width: 50
+                  replicator_preview: false
+              -
+                handle: prepend
+                field:
+                  type: text
+                  display: Voranstellen
+                  localizable: false
+                  width: 50
+                  replicator_preview: false
+              -
+                handle: append
+                field:
+                  type: text
+                  display: Anhängen
+                  localizable: false
+                  width: 50
+                  replicator_preview: false
+        -
+          handle: typewriter
+          field:
+            fullscreen: false
+            type: group
+            display: Schreibmachine
+            localizable: false
+            replicator_preview: false
+            if:
+              type: 'equals typewriter'
+            border: false
+            fields:
+              -
+                handle: words
+                field:
+                  type: grid
+                  display: Wörter
+                  localizable: false
+                  replicator_preview: false
+                  fields:
+                    -
+                      handle: text
+                      field:
+                        type: text
+                        display: Text
+                        localizable: false
+              -
+                handle: effect
+                field:
+                  options:
+                    -
+                      key: typewriter
+                      value: Schreibmachine
+                    -
+                      key: fade
+                      value: Verblassen
+                    -
+                      key: swirl
+                      value: Wirbeln
+                  type: select
+                  display: Effekt
+                  localizable: false
+                  width: 75
+                  replicator_preview: false
+              -
+                handle: loop
+                field:
+                  type: toggle
+                  display: Schleife
+                  localizable: false
+                  width: 25
+                  replicator_preview: false

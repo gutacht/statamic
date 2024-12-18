@@ -4,17 +4,8 @@ fields:
     handle: image
     field: common.image
     config:
-      width: 50
-  -
-    handle: size
-    field: common.size
-    config:
-      width: 50
-  -
-    handle: caption
-    field:
-      input_type: text
-      type: text
-      localizable: true
-      listable: hidden
-      display: Caption
+      mode: list
+      display: Bild
+      show_filename: true
+      width: 100
+      replicator_preview: false

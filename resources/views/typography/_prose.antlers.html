@@ -1,3 +1,7 @@
+---
+class: null
+---
+
 {{#
     @name Prose
     @desc The typography prose partial to render a prose object with `class` attribute.
@@ -16,8 +20,11 @@
         prose-figure:my-0
         prose-pre:whitespace-pre-wrap
         max-w-none
-        {{ class }}
+        {{ span or 'span-content' }}
+        {{ view:class }}
     "
+
+    {{ attributes }}
 >
     {{ slot }}
 </{{ as or 'article' }}>

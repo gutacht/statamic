@@ -1,0 +1,42 @@
+---
+class: null
+---
+
+{{#
+    @name Richtext
+    @desc Content composed with a Bard field.
+    @param richtext The Bard content.
+    @param class Custom css class names.
+    @param attr Additional attributes.
+#}}
+
+<!-- /typography/_richtext.antlers.html -->
+{{ richtext|raw|dump }}
+{{ partial:typography/prose :$as :class="view:class" :when="richtext" }}
+    {{ foreach :array="richtext|raw" }}
+        {{ if value:type == 'heading' }}
+            {{ switch(
+                (value:attrs:level == '2') => { partial:typography/heading :heading="value:content:0:text" },
+                (value:attrs:level == '3') => { partial:typography/heading as="h3" :heading="value:content:0:text" },
+                (value:attrs:level == '4') => { partial:typography/heading as="h4" :heading="value:content:0:text" },
+                () => { text }
+            ) }}
+        {{ elseif value:type == 'paragraph' }}
+            <p
+                {{ value:attrs:class ? 'class="{value:attrs:class}"' : '' }}
+                {{ value:attrs:textAlign == 'left' ? '' : 'style="text-align: {value:attrs:textAlign}"' }}
+            >
+                {{ partial:typography/paragraph_content :content="value:content" }}
+            </p>
+        {{ elseif value:type == 'bulletList' }}
+            <ul>
+                {{ value:content }}
+                    <li>
+                        {{ partial:typography/paragraph_content :content="content:0:content" }}
+                    </li>
+                {{ /value:content }}
+            </ul>
+        {{ /if }}
+    {{ /foreach }}
+{{ /partial:typography/prose }}
+<!-- End: /typography/_richtext.antlers.html -->

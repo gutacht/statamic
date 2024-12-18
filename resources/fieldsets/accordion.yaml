@@ -1,0 +1,6 @@
+title: Akkordeon
+fields:
+  -
+    import: button_group
+  -
+    import: richtext

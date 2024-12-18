@@ -1,0 +1,32 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+          - handle: content
+            field:
+              type: markdown
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      - fields:
+          - handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: "max:200"
+  contact:
+    display: Kontakt
+    sections:
+      - display: Kontakt
+        fields:
+          - import: contact
+title: Standorte

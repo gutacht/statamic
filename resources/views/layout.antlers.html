@@ -23,6 +23,8 @@
 			rel="stylesheet"
 			crossorigin
 		/>
+
+        {{ stack:styles }}
     </head>
     <body class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white">
         {{ stack:seo_body }}
@@ -33,6 +35,8 @@
         {{ partial:layout/header }}
         {{ template_content }}
         {{ partial:layout/footer }}
+
+        {{ stack:scripts }}
     </body>
 </html>
 <!-- End: /layout.antlers.html -->

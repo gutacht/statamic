@@ -1,0 +1,44 @@
+---
+class: null
+---
+
+{{#
+    @name Accordion
+    @desc Single accordion component.
+    @param index The id of this accordion to close others in the same loop.
+#}}
+
+<!-- /components/_accordion.antlers.html -->
+<div
+    x-data="{
+        id: {{ index }},
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }"
+    role="region"
+    class="grid {{ view:class }}"
+>
+    {{ slot:image }}
+
+    <div class="flex items-center {{ up ? 'flex-col-reverse' : 'flex-col' }}">
+        <button
+            type="button"
+            x-on:click="expanded = !expanded"
+            :aria-expanded="expanded"
+        >
+            {{ if slot:button }}
+                {{ slot:button }}
+            {{ else }}
+                <span x-show="!expanded">{{ accordion:button_open }}</span>
+                <span x-show="expanded">{{ accordion:button_close }}</span>
+            {{ /if }}
+        </button>
+        {{ accordion:richtext|raw|dump }}
+        {{ partial:typography/richtext richtext="{accordion:richtext|raw or richtext|raw}" x-show="expanded" x-collapse="" }}
+    </div>
+</div>
+<!-- End: /components/_accordion.antlers.html -->

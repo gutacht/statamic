@@ -1,14 +1,32 @@
+---
+as: h2
+class: null
+---
+
 {{#
     @name Heading
     @desc The typography heading partial to render a heading of different size and shape.
-    @param* content The heading content.
-    @param as The wrapping element. Defaults to `h2`.
+    @param heading Dictionary of heading parameters or content.
     @param color Set a custom text color utility. Falls back to `text-neutral`.
     @param class Add custom CSS classes.
 #}}
 
 <!-- /typography/_heading.antlers.html -->
-<{{ as or 'h2' }} class="text-heading [&_strong]:text-primary {{ color or 'text-neutral' }} {{ class }}">
-    {{ content | nl2br }}
-</{{ as or 'h2' }}>
+{{ if heading }}
+    <{{ view:as }}
+        class="
+            text-heading [&_strong]:text-primary
+            {{ switch(
+                (center) => 'text-center align-center after:m-auto after:mt-6 after:block after:h-[5px] after:w-[120px] after:bg-primary',
+                (view:as == 'h2') => 'align-left text-left border-l-4 border-solid pl-2 md:border-l-[6px] md:pl-4 border-primary',
+                (view:as == 'h3') => 'text-[1.375rem] font-bold leading-[1.65rem] text-primary',
+                (view:as == 'h4') => 'text-[1.25rem] font-bold leading-[1.5rem]'
+            ) }}
+            {{ span or 'span-content' }}
+            {{ view:class }}
+        "
+    >
+        {{ heading }}
+    </{{ view:as }}>
+{{ /if }}
 <!-- End: /typography/_heading.antlers.html -->

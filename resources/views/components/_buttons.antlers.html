@@ -1,26 +1,14 @@
 {{#
-    @name Buttons
-    @desc Multiple buttons component calling in `resources/views/components/_button.antlers.html`.
-    @param inverted Boolean. When the buttons needs inverted styles.
-    @set page.article.buttons
+    @name Button Group
+    @desc Wrapper for button partials to form a group.
+    @param buttons The buttons to render inside the group.
+    @param class Additional CSS classes.
 #}}
 
 <!-- /components/_buttons.antlers.html -->
-{{ if buttons }}
-    {{ if type == 'buttons' }}
-        {{# Add a size utility and use different styling when called as a Bard set. #}}
-        <div class="span-md flex flex-wrap gap-3 not-prose my-8">
-            {{ buttons }}
-                {{ partial:components/button }}
-            {{ /buttons }}
-        </div>
-    {{ else }}
-        {{# The styling when called from any other partial or template. #}}
-        <div class="flex flex-wrap gap-3 {{ class }}">
-            {{ buttons }}
-                {{ partial:components/button :inverted="inverted" class="" }}
-            {{ /buttons }}
-        </div>
-    {{ /if }}
-{{ /if }}
+<div class="flex flex-wrap gap-2 {{ buttons:align }} {{ class }}">
+    {{ buttons:buttons }}
+        {{ partial:components/button }}
+    {{ /buttons:buttons }}
+</div>
 <!-- End: /components/_buttons.antlers.html -->

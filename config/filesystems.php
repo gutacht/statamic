@@ -51,6 +51,13 @@ return [
             'throw' => false,
         ],
 
+        'icons' => [
+            'driver' => 'local',
+            'root' => public_path('icons'),
+            'url' => '/icons',
+            'visibility' => 'public',
+        ],
+
         'images' => [
             'driver' => 'local',
             'root' => public_path('images'),

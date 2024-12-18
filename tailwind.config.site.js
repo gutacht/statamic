@@ -26,6 +26,15 @@ module.exports = {
       primary: {
         DEFAULT: 'oklch(70.64% 0.1976298138715342 45.75451506689873 / <alpha-value>)'
       },
+      success: {
+        DEFAULT: 'oklch(69.93% 0.1686 136.5 / <alpha-value>)'
+      },
+      success: {
+        DEFAULT: 'oklch(69.93% 0.1686 136.5 / <alpha-value>)'
+      },
+      error: {
+        DEFAULT: 'oklch(63.54% 0.2337 33.12 / <alpha-value>)'
+      }
     },
     extend: {
       // Set default transition durations and easing when using the transition utilities.

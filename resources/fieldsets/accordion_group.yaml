@@ -1,0 +1,20 @@
+title: Akkordeon-Gruppe
+fields:
+  -
+    handle: accordions
+    field:
+      collapse: true
+      button_label: 'Akkordeon hinzufügen'
+      type: replicator
+      display: Akkordeons
+      localizable: false
+      replicator_preview: false
+      sets:
+        accordion:
+          display: Akkordeon
+          sets:
+            accordion:
+              display: Akkordeon
+              fields:
+                -
+                  import: accordion

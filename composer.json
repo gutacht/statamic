@@ -10,9 +10,11 @@
     ],
     "require": {
         "php": "^8.2",
+        "jacksleight/statamic-bard-texstyle": "^3.4",
         "laravel/framework": "^11",
         "laravel/reverb": "@beta",
         "laravel/tinker": "^2.9",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "ryanmitchell/statamic-translation-manager": "^2.0",
         "spatie/browsershot": "^4.3",
         "spatie/image": "^3.7",

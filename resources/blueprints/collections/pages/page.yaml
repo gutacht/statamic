@@ -3,11 +3,9 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        display: General
+      - display: General
         fields:
-          -
-            handle: title
+          - handle: title
             field:
               type: text
               required: true
@@ -16,60 +14,45 @@ tabs:
               display: Title
               validate:
                 - required
-      -
-        display: 'Page builder'
+      - display: "Page builder"
         fields:
-          -
-            import: page_builder
+          - import: page_builder
   seo:
     display: SEO
     sections:
-      -
-        display: Basic
-        instructions: 'Basic SEO settings.'
+      - display: Basic
+        instructions: "Basic SEO settings."
         fields:
-          -
-            import: 'statamic-peak-seo::seo_basic'
-      -
-        display: Advanced
-        instructions: 'Advanced SEO settings.'
+          - import: "statamic-peak-seo::seo_basic"
+      - display: Advanced
+        instructions: "Advanced SEO settings."
         fields:
-          -
-            import: 'statamic-peak-seo::seo_advanced'
-      -
-        display: 'Open Graph'
-        instructions: 'Open Graph meta tags for social sharing.'
+          - import: "statamic-peak-seo::seo_advanced"
+      - display: "Open Graph"
+        instructions: "Open Graph meta tags for social sharing."
         fields:
-          -
-            import: 'statamic-peak-seo::seo_open_graph'
-      -
-        display: Sitemap
-        instructions: 'Sitemap configuration.'
+          - import: "statamic-peak-seo::seo_open_graph"
+      - display: Sitemap
+        instructions: "Sitemap configuration."
         fields:
-          -
-            import: 'statamic-peak-seo::seo_sitemap'
-      -
-        display: 'JSON-ld Schema'
-        instructions: 'Custom JSON-ld schema objects.'
+          - import: "statamic-peak-seo::seo_sitemap"
+      - display: "JSON-ld Schema"
+        instructions: "Custom JSON-ld schema objects."
         fields:
-          -
-            import: 'statamic-peak-seo::seo_jsonld'
+          - import: "statamic-peak-seo::seo_jsonld"
   sidebar:
     display: Sidebar
     sections:
-      -
-        display: Meta
+      - display: Meta
         fields:
-          -
-            handle: slug
+          - handle: slug
             field:
               type: slug
               localizable: true
               validate:
                 - required
               display: Slug
-          -
-            handle: parent
+          - handle: parent
             field:
               type: entries
               collections:
@@ -78,11 +61,3 @@ tabs:
               listable: false
               localizable: true
               display: Parent
-  contact:
-    display: Kontakt
-    sections:
-      -
-        display: Kontakt
-        fields:
-          -
-            import: contact

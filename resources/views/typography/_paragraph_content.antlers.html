@@ -1,0 +1,27 @@
+{{#
+    @name Paragraph Content
+    @desc Loop through paragraph content from Bard.
+    @param content The paragraph content.
+#}}
+
+{{ content }}
+    {{ if type == 'hardBreak' }}
+        <br>
+    {{ elseif marks }}
+        {{ if marks:0:type == 'bold' }}
+            <strong>{{ text }}</strong>
+        {{ elseif marks:0:type == 'link' }}
+            <a
+                href="{{ marks:0:attrs:href }}"
+                {{ marks:0:attrs:rel ? 'rel="{marks:0:rel}"' : '' }}
+                {{ marks:0:attrs:target ? 'target="{marks:0:target}"' : '' }}
+                {{ marks:0:attrs:title ? 'title="{marks:0:title}"' : '' }}
+                class="inline-block"
+            >
+                {{ text }}
+            </a>
+        {{ /if }}
+    {{ else }}
+        {{ text }}
+    {{ /if }}
+{{ /content }}

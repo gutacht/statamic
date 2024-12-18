@@ -8,9 +8,5 @@
 #}}
 
 <!-- /typography/_caption.antlers.html -->
-{{ if caption }}
-    <{{ as or 'span' }} class="block mt-2 text-sm {{ color or 'text-neutral' }} {{ class }}">
-        {{ caption }}
-    </{{ as or 'span' }}>
-{{ /if }}
+{{ partial:typography/richtext as="figcaption" }}
 <!-- End: /typography/_caption.antlers.html -->
