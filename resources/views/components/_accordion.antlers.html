@@ -38,7 +38,7 @@ class: null
             {{ /if }}
         </button>
         {{ accordion:richtext|raw|dump }}
-        {{ partial:typography/richtext richtext="{accordion:richtext|raw or richtext|raw}" x-show="expanded" x-collapse="" }}
+        {{ partial:typography/richtext richtext="{accordion:richtext or richtext}" x-show="expanded" x-collapse="" }}
     </div>
 </div>
 <!-- End: /components/_accordion.antlers.html -->
