@@ -2,31 +2,44 @@ tabs:
   main:
     display: Hauptteil
     sections:
-      - fields:
-          - handle: title
+      -
+        fields:
+          -
+            handle: title
             field:
               type: text
               required: true
+              width: 50
               localizable: false
               validate:
                 - required
-          - handle: content
+              display: Ort
+          -
+            handle: ort_adjektiv
             field:
-              type: markdown
-              localizable: true
+              type: text
+              localizable: false
+              validate:
+                - required
+              display: 'Ort (Adjektiv)'
+              width: 50
   sidebar:
     display: Sidebar
     sections:
-      - fields:
-          - handle: slug
+      -
+        fields:
+          -
+            handle: slug
             field:
               type: slug
               localizable: true
-              validate: "max:200"
+              validate: 'max:200'
   contact:
     display: Kontakt
     sections:
-      - display: Kontakt
+      -
+        display: Kontakt
         fields:
-          - import: contact
+          -
+            import: contact
 title: Standorte

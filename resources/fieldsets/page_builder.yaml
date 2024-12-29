@@ -136,21 +136,190 @@ fields:
                           replicator_preview: false
                       -
                         import: richtext
+            tip:
+              display: Tipp
+              icon: alert-warning-exclamation-mark
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                    localizable: false
+                -
+                  import: richtext
+                -
+                  import: icon
+            icon_list:
+              display: Icon-Liste
+              icon: file-content-list
+              fields:
+                -
+                  import: heading
+                -
+                  handle: list
+                  field:
+                    button_label: 'Listenpunkt hinzufügen'
+                    type: replicator
+                    display: Liste
+                    localizable: false
+                    replicator_preview: false
+                    collapse: true
+                    sets:
+                      neue_setgruppe:
+                        display: 'Neue Setgruppe'
+                        sets:
+                          list_item:
+                            display: Listenpunkt
+                            fields:
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Titel
+                                  localizable: false
+                              -
+                                import: richtext
+                              -
+                                import: icon
+                -
+                  import: image
+            icons:
+              display: Icons
+              fields:
+                -
+                  import: heading
+                -
+                  handle: grid
+                  field:
+                    collapse: true
+                    type: replicator
+                    display: Raster
+                    localizable: false
+                    replicator_preview: false
+                    button_label: 'Zum Raster hinzufügen'
+                    sets:
+                      neue_setgruppe:
+                        display: 'Neue Setgruppe'
+                        sets:
+                          accordion:
+                            display: Akkordeon
+                            fields:
+                              -
+                                import: icon
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Titel
+                                  localizable: false
+            reviews:
+              display: Bewertungen
+              icon: favorite-star
+              fields:
+                -
+                  import: heading
+                -
+                  handle: grid
+                  field:
+                    collapse: true
+                    max_sets: 3
+                    button_label: 'Zum Raster hinzufügen'
+                    type: replicator
+                    display: Raster
+                    localizable: false
+                    replicator_preview: false
+                    sets:
+                      neue_setgruppe:
+                        display: 'Neue Setgruppe'
+                        sets:
+                          review:
+                            display: Bewertung
+                            fields:
+                              -
+                                handle: name
+                                field:
+                                  type: text
+                                  display: Name
+                                  localizable: false
+                              -
+                                import: heading
+                              -
+                                import: richtext
+            compare:
+              display: Vergleich
+              icon: layout-table-column-insert
+              fields:
+                -
+                  import: heading
+                -
+                  handle: good
+                  field:
+                    type: group
+                    display: Gut
+                    localizable: false
+                    width: 50
+                    replicator_preview: false
+                    fields:
+                      -
+                        import: richtext
+                -
+                  handle: bad
+                  field:
+                    type: group
+                    display: Schlecht
+                    localizable: false
+                    width: 50
+                    replicator_preview: false
+                    fields:
+                      -
+                        import: richtext
         media:
           display: Medien
           instructions: 'Diverse Medienelemente.'
           icon: media-image-picture-gallery
           sets:
-            image:
-              display: Bild
+            gallery:
+              display: Galerie
               icon: media-image-photo-focus-frame
               fields:
                 -
-                  import: image
+                  import: heading
                 -
                   import: richtext
-            image_accordions:
-              display: Bilder-Akkordeons
+                  prefix: before_
+                -
+                  handle: images
+                  field:
+                    collapse: true
+                    button_label: 'Bild hinzufügen'
+                    type: replicator
+                    display: Bilder
+                    localizable: false
+                    replicator_preview: false
+                    max_sets: 4
+                    sets:
+                      neue_setgruppe:
+                        display: 'Neue Setgruppe'
+                        sets:
+                          image:
+                            display: Bild
+                            fields:
+                              -
+                                import: image
+                              -
+                                handle: stretch
+                                field:
+                                  type: toggle
+                                  display: Strecken
+                                  instructions: 'Streckt das Bild über zwei Zeilen. Funktioniert nur beim dritten Bild und sollte auch nur mit maximal drei Bildern verwendet werden.'
+                                  localizable: false
+                                  replicator_preview: false
+                                  if: 'custom isIndex:2'
+                -
+                  import: richtext
+            image_grid:
+              display: Bilder-Raster
               icon: media-image-picture-gallery
               fields:
                 -
@@ -166,6 +335,7 @@ fields:
                     display: Raster
                     localizable: false
                     replicator_preview: false
+                    button_label: 'Zum Raster hinzufügen'
                     sets:
                       accordions:
                         display: Akkordeons
@@ -180,28 +350,27 @@ fields:
                                   display: TItel
                                   localizable: false
                               -
-                                import: richtext
-                              -
-                                handle: image
-                                field:
-                                  max_files: 1
-                                  container: images
-                                  type: assets
-                                  display: Bild
-                                  localizable: false
-                                  replicator_preview: false
+                                import: image
+            video:
+              display: Video
+              icon: media-webcam-video
+              fields:
+                -
+                  import: heading
+                -
+                  import: richtext
+                -
+                  handle: embed
+                  field:
+                    type: video
+                    display: Embed
+                    localizable: false
+                    replicator_preview: false
         interactive:
           display: Interactive
           instructions: 'Interactive blocks.'
           icon: programming-script-code
           sets:
-            form:
-              display: Form
-              instructions: 'Select and render a form.'
-              icon: mail-chat-bubble-text
-              fields:
-                -
-                  import: form
             counter:
               display: Zähler
               icon: shopping-store-discount-percent
@@ -298,3 +467,96 @@ fields:
                     display: Layout
                     localizable: false
                     replicator_preview: false
+            team:
+              display: Team
+              icon: user-multiple
+              fields:
+                -
+                  import: heading
+            accordions:
+              display: Akkordeons
+              icon: layout-split-horizontal
+              fields:
+                -
+                  import: heading
+                -
+                  import: richtext
+                -
+                  handle: accordions
+                  field:
+                    collapse: true
+                    button_label: 'Akkordeon hinzufügen'
+                    type: replicator
+                    display: Akkordeons
+                    localizable: false
+                    sets:
+                      neue_setgruppe:
+                        display: 'Neue Setgruppe'
+                        sets:
+                          accordion:
+                            display: Akkordeon
+                            fields:
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Titel
+                                  localizable: false
+                              -
+                                import: richtext
+  -
+    handle: form
+    field:
+      type: group
+      display: Formular
+      localizable: false
+      fields:
+        -
+          import: heading
+        -
+          import: richtext
+  -
+    handle: footnotes
+    field:
+      type: group
+      display: Fußtexte
+      localizable: false
+      fields:
+        -
+          handle: left
+          field:
+            border: false
+            type: group
+            display: Links
+            localizable: false
+            width: 50
+            fields:
+              -
+                import: richtext
+        -
+          handle: right
+          field:
+            border: false
+            type: group
+            display: Rechts
+            localizable: false
+            width: 50
+            fields:
+              -
+                import: richtext
+  -
+    handle: locations
+    field:
+      type: group
+      display: Standorte
+      localizable: false
+      fields:
+        -
+          handle: entries
+          field:
+            create: false
+            collections:
+              - locations
+            type: entries
+            display: Einträge
+            localizable: false

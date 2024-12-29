@@ -1,6 +1,7 @@
 title: Kontakt
 fields:
-  - handle: phone
+  -
+    handle: phone
     field:
       input_type: tel
       autocomplete: tel
@@ -10,7 +11,8 @@ fields:
       width: 50
       validate:
         - null
-  - handle: mobile
+  -
+    handle: mobile
     field:
       input_type: tel
       autocomplete: tel
@@ -18,7 +20,8 @@ fields:
       display: Mobil
       localizable: true
       width: 50
-  - handle: mail
+  -
+    handle: email
     field:
       input_type: email
       autocomplete: email
@@ -27,14 +30,16 @@ fields:
       localizable: true
       validate:
         - email
-  - handle: street
+  -
+    handle: street
     field:
       autocomplete: street-address
       type: text
       display: Straße
       localizable: true
       width: 50
-  - handle: city
+  -
+    handle: city
     field:
       type: text
       display: Ort

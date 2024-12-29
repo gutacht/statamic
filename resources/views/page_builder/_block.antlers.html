@@ -1,4 +1,5 @@
 ---
+id: null
 class: null
 ---
 
@@ -7,6 +8,8 @@ class: null
 	@desc The page builder block wrapper
 #}}
 
-<{{ as or 'section' }} class="fluid-grid {{ space or 'stack-6' }} {{ view:class }}">
+{{ hasBgGray = view:class|contains('bg-gray') }}
+
+<{{ as or 'section' }} id="{{ view:id }}" class="fluid-grid [&>*:not(.no-content)]:span-content {{ space or 'stack-6' }} {{ view:class }} {{ hasBgGray ?= 'stack-space-collapse' }}">
     {{ slot }}
 </{{ as or 'section' }}>

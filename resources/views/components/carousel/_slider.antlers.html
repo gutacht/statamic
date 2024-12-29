@@ -1,0 +1,131 @@
+---
+class: null
+skip: 1
+scrollbar: false
+loop: true
+---
+
+{{#
+    @name Carousel Slider
+    @desc An Alpine carousel component using native scroll behaviour.
+    @param skip How many slides to skip. Defaults to 1.
+    @param visible Class for slide width to change number of visible slides.
+    @param scrollbar Shor or hide scrollbar. Defaults to false.
+    @param loop Loop through the slides. Defaults to true.
+#}}
+
+<!-- /components/carousel/_slider.antlers.html -->
+<div
+    x-data="{
+        skip: {{ view:skip }},
+        loop: {{ view:loop|bool_string }},
+        atStart: false,
+        atEnd: false,
+        slider: $refs.slider,
+        next() {
+            this.to((current, offset) => (this.loop && this.atEnd) ? 0 : current + (offset * this.skip))
+        },
+        prev() {
+            this.to((current, offset) => (this.loop && this.atStart) ? offset * this.slider.childElementCount : current - (offset * this.skip))
+        },
+        to(strategy) {
+            let current = this.slider.scrollLeft
+            let offset = this.slider.firstElementChild.getBoundingClientRect().width
+
+            this.slider.scrollTo({ left: strategy(current, offset), behavior: 'smooth' })
+        },
+        focusableWhenVisible: {
+            'x-intersect:enter'() {
+                this.$el.removeAttribute('tabindex')
+            },
+            'x-intersect:leave'() {
+                this.$el.setAttribute('tabindex', '-1')
+            },
+        },
+        detectStartEnd: {
+            'x-intersect:enter.threshold.05'() {
+                let slideEls = this.$el.parentElement.children
+
+                // If this is the first slide.
+                if (slideEls[0] === this.$el) {
+                    this.atStart = true
+                // If this is the last slide.
+                } else if (slideEls[slideEls.length-1] === this.$el) {
+                    this.atEnd = true
+                }
+            },
+            'x-intersect:leave.threshold.05'() {
+                let slideEls = this.$el.parentElement.children
+
+                // If this is the first slide.
+                if (slideEls[0] === this.$el) {
+                    this.atStart = false
+                // If this is the last slide.
+                } else if (slideEls[slideEls.length-1] === this.$el) {
+                    this.atEnd = false
+                }
+            },
+        },
+    }"
+    class="flex w-full flex-col {{ view:class }}"
+>
+<div
+    x-on:keydown.right="next"
+    x-on:keydown.left="prev"
+    tabindex="0"
+    role="region"
+    aria-labelledby="carousel-label"
+    class="flex space-x-2"
+>
+    <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+    <!-- Prev Button -->
+    <button
+        x-on:click="prev"
+        class="text-6xl"
+        :aria-disabled="!loop && atStart"
+        :tabindex="!loop && atEnd ? -1 : 0"
+        :class="{ 'opacity-50 cursor-not-allowed': !loop && atStart }"
+    >
+        <span aria-hidden="true">
+            {{ if slot:button_prev }}
+                {{ slot:button_prev }}
+            {{ else }}
+                {{ svg src="svg/arrow_left" width="24px" height="24px" }}
+            {{ /if }}
+        </span>
+        <span class="sr-only">Skip to previous slide page</span>
+    </button>
+
+    <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+
+    <ul
+        x-ref="slider"
+        tabindex="0"
+        role="listbox"
+        aria-labelledby="carousel-content-label"
+        class="flex w-full snap-x snap-mandatory overflow-x-scroll {{ !view:scrollbar ?= 'no-scrollbar' }}"
+    >
+        {{ slot }}
+    </ul>
+
+    <!-- Next Button -->
+    <button
+        x-on:click="next"
+        class="text-6xl"
+        :aria-disabled="!loop && atEnd"
+        :tabindex="!loop && atEnd ? -1 : 0"
+        :class="{ 'opacity-50 cursor-not-allowed': !loop && atEnd }"
+    >
+        <span aria-hidden="true">
+            {{ if slot:button_next }}
+                {{ slot:button_next }}
+            {{ else }}
+                {{ svg src="svg/arrow_right" width="24px" height="24px" }}
+            {{ /if }}
+        </span>
+        <span class="sr-only">Skip to next slide page</span>
+    </button>
+</div>
+</div>
+<!-- End: /components/carousel/_slider.antlers.html -->

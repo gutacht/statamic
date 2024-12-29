@@ -12,3 +12,7 @@ Statamic.booting(() => {
 });
 
 */
+
+Statamic.$conditions.add('isIndex', ({ params, store }) => {
+    console.log(params, store);
+});

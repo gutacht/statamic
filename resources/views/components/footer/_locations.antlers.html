@@ -1,0 +1,18 @@
+{{#
+    @name Locations
+    @desc List of location entries.
+#}}
+
+<!-- /components/footer/_locations.antlers.html -->
+{{ partial:page_builder/block class="bg-gray bg-[#464646] [&_article_*]:text-white [&_.button_a]:bg-white [&_.button_a]:text-neutral [&_.button_a:hover]:text-primary" }}
+    {{ partial:typography/heading as="div" center="true" class="h2 text-white" heading="{ trans:footer_locations_heading }" }}
+
+    <div class="flex flex-wrap gap-y-2">
+        {{ locations:entries }}
+            <a href="{{ url }}" class="text-white w-full md:w-1/2 underline hover:no-underline">
+                {{ trans:footer_locations_heading }} {{ title }}
+            </a>
+        {{ /locations:entries }}
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /components/footer/_locations.antlers.html -->

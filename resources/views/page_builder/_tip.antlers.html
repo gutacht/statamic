@@ -1,0 +1,20 @@
+{{#
+	@name Tip
+	@desc A colored info section with an icon.
+#}}
+
+{{ partial:page_builder/block class="bg-primary py-10 stack-space-8 stack-space-collapse" }}
+    <div class="flex-col px-4 sm:px-8 py-4 sm:py-8 gap-4 mx-auto flex border-[5px] border-solid border-black bg-white">
+        {{ if title }}
+            <div class="text-[1.375rem] font-bold leading-[1.65rem] font-display">
+                {{ title }}
+            </div>
+        {{ /if }}
+
+        <div class="flex flex-col gap-8 sm:flex-row sm:items-center">
+            {{ svg :src="icon" width="100px" height="100px" class="shrink-0 sm:ml-8" }}
+
+            {{ partial:typography/richtext }}
+        </div>
+    </div>
+{{ /partial:page_builder/block }}

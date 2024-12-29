@@ -15,3 +15,4 @@ fields:
       display: Überschrift
       localizable: true
       collapse: true
+      antlers: true

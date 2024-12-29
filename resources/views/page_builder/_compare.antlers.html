@@ -1,0 +1,17 @@
+{{#
+    @name Compare
+    @desc Good and bad things side-by-side.
+    @set page.page_builder.compare
+#}}
+
+<!-- /page_builder/_compare.antlers.html -->
+{{ partial:page_builder/block class="bg-gray" }}
+    {{ partial:typography/heading }}
+
+    {{ partial:components/grid width="368px" }}
+        {{ partial:typography/richtext :richtext="good:richtext|raw" class="list-success" }}
+
+        {{ partial:typography/richtext :richtext="bad:richtext|raw" class="list-error" }}
+    {{ /partial:components/grid }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_compare.antlers.html -->

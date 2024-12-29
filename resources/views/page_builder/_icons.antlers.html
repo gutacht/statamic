@@ -1,0 +1,21 @@
+{{#
+    @name Icons
+    @desc List of icons with title.
+    @set page.page_builder.icons
+#}}
+
+<!-- /page_builder/_icons.antlers.html -->
+{{ partial:page_builder/block space="stack-12" class="bg-gray" }}
+    {{ partial:typography/heading center="true" }}
+
+    <div class="flex flex-wrap">
+        {{ grid }}
+            <div class="flex flex-col items-center gap-3 p-2 mb-4 w-1/2 sm:w-1/3 md:w-1/4">
+                {{ svg :src="icon" class="h-10" }}
+
+                <span class="text-center text-lg font-bold leading-6 font-display">{{ title }}</span>
+            </div>
+        {{ /grid }}
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_icons.antlers.html -->

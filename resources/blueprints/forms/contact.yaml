@@ -13,33 +13,33 @@ tabs:
                 - required
                 - 'min:2'
               localizable: true
-              width: 66
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              input_type: text
-              antlers: false
-              hide_display: false
+              autocomplete: name
+          -
+            handle: phone
+            field:
+              display: Telefon
+              type: text
+              validate:
+                - required
+                - 'phone:INTERNATIONAL,DE'
+              localizable: true
+              width: 50
+              input_type: tel
+              autocomplete: tel
           -
             handle: email
             field:
-              display: 'Email address'
+              display: E-Mail
               type: text
               validate:
                 - required
                 - email
               localizable: true
-              width: 66
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              input_type: text
-              antlers: false
-              hide_display: false
+              width: 50
+              input_type: email
+              autocomplete: email
           -
-            handle: message_body
+            handle: message
             field:
               display: Message
               type: textarea
@@ -47,21 +47,20 @@ tabs:
                 - required
                 - 'min:5'
               localizable: true
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              antlers: false
-              hide_display: false
           -
             handle: consent
             field:
-              inline_label: 'I agree that my submitted data is being collected and stored.'
-              default: false
-              display: Consent
+              inline_label: 'Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.'
+              display: Datenschutz
               type: toggle
-              icon: toggle
-              listable: hidden
-              instructions_position: above
               validate:
                 - accepted
+              localizable: false
+              visibility: hidden
+          -
+            handle: hidden_page
+            field:
+              type: text
+              display: Seite
+              localizable: false
+              always_save: false

@@ -1,5 +1,6 @@
 ---
 class: null
+show: null
 ---
 
 {{#
@@ -13,7 +14,7 @@ class: null
 {{ if (layout == 'hero' && (page:id == 'home' || page:collection == 'locations')) || layout != 'hero' }}
     <div
         class="
-            flex span-content flex-col
+            flex flex-col
             {{ switch(
                 (layout == 'hero') => 'w-fit',
                 () => 'sm:flex-row sm:gap-x-20'
@@ -28,7 +29,16 @@ class: null
         {{ partial:components/contact/item
             :contact="mobile ?? contact:mobile"
             label="{trans:contact_mobile}"
-            icon="icons/contact/mobile"
+            icon="svg/mobile"
         }}
+
+        {{ if show_email }}
+            {{ partial:components/contact/item
+                :contact="email ?? contact:email"
+                label="{trans:contact_email}"
+                icon="svg/email"
+                protocol="mailto"
+            }}
+        {{ /if }}
     </div>
 {{ /if }}

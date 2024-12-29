@@ -22,12 +22,13 @@ module.exports = {
         DEFAULT: colors.slate['800'],
         ...colors.slate
       },
+      light: {
+        DEFAULT: colors.slate['300'],
+        ...colors.slate
+      },
       // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
       primary: {
         DEFAULT: 'oklch(70.64% 0.1976298138715342 45.75451506689873 / <alpha-value>)'
-      },
-      success: {
-        DEFAULT: 'oklch(69.93% 0.1686 136.5 / <alpha-value>)'
       },
       success: {
         DEFAULT: 'oklch(69.93% 0.1686 136.5 / <alpha-value>)'
@@ -37,6 +38,9 @@ module.exports = {
       }
     },
     extend: {
+      screens: {
+        'xs': '400px',
+      },
       // Set default transition durations and easing when using the transition utilities.
       transitionDuration: {
         DEFAULT: '300ms',

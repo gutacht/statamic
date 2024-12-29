@@ -4,9 +4,7 @@
 #}}
 
 <!-- /default.antlers.html -->
-<main class="stack-12 md:stack-16 lg:stack-24" id="content">
-    {{ partial:components/hero }}
-
+<main class="stack-8 md:stack-12 lg:stack-16" id="content">
     {{ if {mount_url:{collection}} }}
         {{ get_content from="{{ mount_url:{collection} }}" }}
             {{ partial:components/page_builder }}

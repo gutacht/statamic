@@ -1,13 +1,17 @@
+---
+class: null
+---
+
 {{#
     @name Review Badges
     @desc Google and ProvenExpert reviews.
 #}}
 
 <!-- /components/_badges.antlers.html -->
-<div class="span-content flex flex-row flex-wrap items-center gap-6">
+<div class="flex flex-row flex-wrap items-center gap-6 {{ view:class }}">
     <div class="flex w-fit items-center rounded-sm border-t-4 border-solid border-[#4fce6a] bg-white p-3 antialiased shadow-md">
         <div class="logo" data-svelte-h="svelte-1dkkp1a">
-            {{ svg src="icons/google/logo" width="44px" height="44px" }}
+            {{ svg src="svg/google/logo" width="44px" height="44px" }}
         </div>
 
         <div class="ml-2">
@@ -20,7 +24,7 @@
                 </div>
                 <div class="stars flex items-center">
                     {{ loop times="5" }}
-                        {{ svg src="icons/google/star" width="18px" height="18px" class="mr-1" }}
+                        {{ svg src="svg/google/star" width="18px" height="18px" class="mr-1" }}
                     {{ /loop }}
                 </div>
             </div>

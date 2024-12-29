@@ -1,0 +1,25 @@
+tabs:
+  members:
+    display: Mitglieder
+    sections:
+      -
+        fields:
+          -
+            handle: members
+            field:
+              collapse: true
+              button_label: 'Mitglied hinzufügen'
+              type: replicator
+              display: Mitglieder
+              localizable: false
+              sets:
+                neue_setgruppe:
+                  display: 'Neue Setgruppe'
+                  sets:
+                    member:
+                      display: Mitglied
+                      fields:
+                        -
+                          import: image
+                        -
+                          import: heading

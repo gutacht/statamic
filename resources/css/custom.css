@@ -16,17 +16,29 @@
         @apply bg-black bg-opacity-80;
     }
 
+    .bg-gray {
+        @apply bg-gray-50 py-8 md:py-12;
+    }
+
 	.list-success,
 	.list-error {
 		@apply [&_li]:list-none [&_li]:pl-5 [&_li::before]:content-[''] [&_li::before]:shrink-0 [&_li]:relative [&_li::before]:absolute [&_ul]:pl-0;
 	}
     .list-success li::before {
         @apply bg-success h-4 w-4 top-1 left-0;
-        mask: url('/icons/misc/check.svg') no-repeat;
+        mask: url('/svg/check.svg') no-repeat;
     }
     .list-error li::before {
         @apply bg-error h-6 w-6 -left-1;
-        mask: url('/icons/misc/cross.svg') no-repeat;
+        mask: url('/svg/cross.svg') no-repeat;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }
 

@@ -1,0 +1,114 @@
+{{#
+    @name Form
+    @desc Contact form with contact data.
+    @set page.page_builder.form
+#}}
+
+<!-- /page_builder/_form.antlers.html -->
+{{ partial:page_builder/block id="kontakt" space="stack-12" class="bg-gray" }}
+    {{ partial:typography/heading :heading="form:heading" center="true" }}
+
+    {{ partial:typography/richtext :richtext="form:richtext|raw" class="text-center" }}
+
+    {{ partial:components/contact/list show_email="true" class="justify-center" }}
+
+    {{ form:create in="contact" js="alpine:form" attr:x-ref="form" class="!span-lg" }}
+        <div x-data="formHandler()" x-init="form.hidden_page = '{{ slug }}', form.validate('hidden_page')" x-cloak class="flex flex-col gap-4">
+            <div class="hidden">
+                <label class="font-bold" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="text-red-700">*</sup></label>
+                <input class="form-input w-full" id="{{ honeypot }}" type="text" name="{{ honeypot }}" x-model="form.{{ honeypot }}" tabindex="-1" autocomplete="off"/>
+            </div>
+
+            {{ sections }}
+                <fieldset class="w-full grid md:grid-cols-12 gap-6">
+                    {{ if display || instructions }}
+                        <span class="md:col-span-12">
+                            {{ if display }}
+                                <legend class="text-lg font-bold font-display">
+                                    {{ display }}
+                                </legend>
+                            {{ /if }}
+
+                            {{ if instructions }}
+                                <p>
+                                    {{ instructions }}
+                                </p>
+                            {{ /if }}
+                        </span>
+                    {{ /if }}
+
+                    {{ fields scope="field" }}
+                        {{ isHidden = handle|starts_with('hidden') }}
+
+                        <template x-if="{{ show_field }}">
+                            <div class="
+                                flex flex-col
+                                {{ input_type == 'hidden' ?= 'hidden' }}
+                                {{ switch(
+                                    (width == '25') => 'md:col-span-3',
+                                    (width == '33') => 'md:col-span-4',
+                                    (width == '50') => 'md:col-span-6',
+                                    (width == '66') => 'md:col-span-8',
+                                    (width == '75') => 'md:col-span-9',
+                                    () => 'md:col-span-12'
+                                )}}
+                                {{ isHidden ?= 'hidden' }}
+                            ">
+                                {{ unless type == 'spacer' }}
+                                    <label class="font-medium leading-7" for="{{ handle }}">
+                                        {{ trans :key="field:display" }}
+                                        {{ if validate | contains('required') }}
+                                            <sup class="text-red-700">*</sup>
+                                        {{ /if }}
+
+                                        {{ if field:instructions && instructions_position != 'below' }}
+                                            {{ partial:typography/p class="mt-1 font-normal text-sm" content="{ trans :key="field:instructions" }" }}
+                                        {{ /if }}
+                                    </label>
+                                {{ /unless }}
+
+                                <div class="flex flex-col">
+                                    {{ field:field }}
+
+                                    <template x-if="form.invalid('{{ handle }}')">
+                                        <span class="text-red-700 text-sm font-bold" x-text="form.errors.{{ handle }}"></span>
+                                    </template>
+
+                                    {{ if field:instructions && instructions_position === 'below' }}
+                                        <p id="{{ field:handle }}-instructions">
+                                            {{ partial:typography/p as="span" class="text-sm" content="{ trans :key="field:instructions" }" }}
+                                        </p>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                        </template>
+                    {{ /fields }}
+                </fieldset>
+            {{ /sections }}
+
+            <button class="button" type="button" @click.prevent="submit" x-bind:disabled="form.processing" x-bind:class="form.processing && 'opacity-25 cursor-default'">
+                {{ trans:strings.form_send }}
+            </button>
+
+            <template x-if="form.hasErrors && submitted">
+                <div id="summary" role="group" class="rounded border p-4 bg-red-50 border-red-700">
+                    <div class="mb-2 leading-5 font-bold text-red-700">{{ trans:strings.form_error }}</div>
+                    <ul class="list-disc list-inside marker:text-red-700">
+                        <template x-for="(error, index) in form.errors">
+                            <li>
+                                <a :href="`#${index}`" @click.prevent="$focus.focus(document.querySelector(`#${index}`))" x-text="error" class="underline text-red-700 focus:outline-red-700"></a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+
+            <template x-if="success">
+                {{ partial:components/notification type="success" class="md:col-span-12" content="{trans:strings.form_success}" }}
+            </template>
+        </div>
+    {{ /form:create }}
+
+    {{ partial:statamic-peak-tools::snippets/form_handler }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_form.antlers.html -->

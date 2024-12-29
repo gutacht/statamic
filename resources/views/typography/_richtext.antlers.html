@@ -11,7 +11,6 @@ class: null
 #}}
 
 <!-- /typography/_richtext.antlers.html -->
-{{ richtext|raw|dump }}
 {{ partial:typography/prose :$as :class="view:class" :when="richtext" }}
     {{ foreach :array="richtext|raw" }}
         {{ if value:type == 'heading' }}
@@ -23,16 +22,16 @@ class: null
             ) }}
         {{ elseif value:type == 'paragraph' }}
             <p
-                {{ value:attrs:class ? 'class="{value:attrs:class}"' : '' }}
+                {{ value:attrs:class ?= 'class="{value:attrs:class}"' }}
                 {{ value:attrs:textAlign == 'left' ? '' : 'style="text-align: {value:attrs:textAlign}"' }}
             >
-                {{ partial:typography/paragraph_content :content="value:content" }}
+                {{ { partial:typography/paragraph :content="value:content" } | regex_replace('\s+([.,])', '\1') }}
             </p>
         {{ elseif value:type == 'bulletList' }}
             <ul>
                 {{ value:content }}
                     <li>
-                        {{ partial:typography/paragraph_content :content="content:0:content" }}
+                        {{ partial:typography/paragraph :content="content:0:content" }}
                     </li>
                 {{ /value:content }}
             </ul>

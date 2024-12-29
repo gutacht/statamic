@@ -14,15 +14,17 @@
     {{ mailto = 'mailto:' + link:mailto }}
 {{ /if }}
 
-<{{ link_type == 'none' ? 'button' : 'a' }}
-        {{ if link_type == 'none' }}
-            type="button"
-        {{ else }}
+{{link|dump}}
+<{{ link ? 'a' : 'button' }}
+        {{ if link }}
             href="{{ link:entry:url or link:file or link:url or tel or mailto }}"
             target="{{link:target}}"
+        {{ else }}
+            type="button"
         {{ /if }}
         class="button {{ class }}"
+        {{ attributes }}
     >
         <span class="flex-1">{{ content }}</span>
-</{{ link_type == 'none' ? 'button' : 'a' }}>
+</{{ link ? 'a' : 'button' }}>
 <!-- End: /components/_button.antlers.html -->

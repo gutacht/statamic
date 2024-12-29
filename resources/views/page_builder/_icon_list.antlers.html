@@ -1,0 +1,30 @@
+{{#
+	@name Icon List
+	@desc Iconized list items with optional image and background.
+#}}
+
+<!-- /page_builder/_icon_list.antlers.html -->
+{{ partial:page_builder/block class="bg-gray" }}
+    {{ partial:typography/heading center="true" }}
+
+    <div class="flex flex-col items-center lg:flex-row gap-6">
+        <ul class="flex-grow [&:last-child>.icon-col::after]:hidden">
+            {{ list }}
+                <li class="!mt-0 flex !items-stretch gap-2 sm:gap-4">
+                    <div class="flex flex-col items-center after:w-[5px] after:flex-grow after:bg-primary after:content-[''] {{ last ?= 'after:hidden' }}">
+                        {{ svg :src="icon" width="40px" height="40px" }}
+                    </div>
+
+                    <div class="!m-0 pb-4 pt-1">
+                        {{ partial:typography/heading :heading="title" as="h3" }}
+
+                        {{ partial:typography/richtext }}
+                    </div>
+                </li>
+            {{ /list }}
+        </ul>
+
+        {{ partial:components/image :when="image" }}
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_icon_list.antlers.html -->

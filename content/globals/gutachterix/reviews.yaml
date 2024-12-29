@@ -1,2 +1,986 @@
 google: '5,0'
 provenexpert: provenexpert.png
+names:
+  - 'Christian W.'
+  - 'Anne W.'
+  - 'Nicole H.'
+  - 'Robert K.'
+  - 'Klaus W.'
+  - 'Tim N.'
+  - 'Anton B.'
+  - 'Niklas L.'
+  - 'Konstantin L.'
+  - 'Oskar K.'
+  - 'Mehmet S.'
+  - 'Friedrich E.'
+  - 'Pascal B.'
+  - 'Martin G.'
+  - 'Tim B.'
+  - 'Dennis B.'
+  - 'Kristin V.'
+  - 'Sandra G.'
+  - 'Birgit K.'
+  - 'Nils E.'
+  - 'Jan P.'
+  - 'Markus J.'
+  - 'Tobias W.'
+  - 'Philipp A.'
+  - 'Matteo R.'
+  - 'Sören P.'
+  - 'Hannes I.'
+  - 'Tom S.'
+  - 'Karl U.'
+  - 'Jonas P.'
+  - 'Fabienne B.'
+  - 'Mathias R.'
+  - 'Justin E.'
+  - 'Aron R.'
+  - 'Kurt D.'
+  - 'Daniel E.'
+  - 'Jürgen W.'
+  - 'Rebekka N.'
+  - 'Fritz J.'
+  - 'Jochen A.'
+  - 'Elias N.'
+  - 'Niels K.'
+  - 'Jörn H.'
+  - 'Sascha T.'
+texts:
+  -
+    id: m527576m
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sehr reaktionsschnell und hilfsbereit und haben stets einen ausgezeichneten Service geboten. Der Termin war schnell und einfach, und alles war unkompliziert und zu meiner Zufriedenheit.'
+    type: text
+    enabled: true
+  -
+    id: m5275ebp
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich bin so froh, dass ich Gutachterix gefunden habe. Als mein Auto kaputt ging, konnte ich schnell einen Termin für unseren Toyota Prius ausmachen. Sobald man den Gutachter trifft, merkt man, dass dieser Mann weiß, was er tut. Ich fühlte mich im Nachhinein erleichtert, weil ich zuerst einfach nicht wusste was zu tun ist. Sehr angetan war ich von Angebot die Begutachtung direkt bei uns Hause in {{ort}} durchzuführen.'
+    type: text
+    enabled: true
+  -
+    id: m5284ddj
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Das freundliche Gutachterix-Personal gab mir das Gefühl, willkommen zu sein, und sie waren sehr professionell. Ich hatte sofort einen Termin bekommen. Der angebotene Kaffee schmeckt auch fantastisch. Mein Ansprechpartner Nummer 1 bei Unfallschäden.'
+    type: text
+    enabled: true
+  -
+    id: m5284kr5
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich war jetzt schon das zweite Mal bei Gutachterix und Herrn Lachner. Diesmal wurde der Ford-Van meiner Frau auf dem Supermarkt-Parkplatz in {{ort}} beschädigt. Erwähnenswert ist, dass bei meinen Email-Rückfragen sogar Abends sehr schnell geantwortet wurde.'
+    type: text
+    enabled: true
+  -
+    id: m5284ozb
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sie waren sehr schnell und zuvorkommend. Ich bin mit der Leistung von Gutachterix {{ort}} sehr zufrieden, zumal sie zuvor auch in unserem Bekanntenkreis schon gute Arbeit geleistet haben.'
+    type: text
+    enabled: true
+  -
+    id: m5285ei7
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix ist ein tolles Unternehmen. Der Gutachter hat das Fahrzeug direkt bei uns in {{ort}} fachmännisch besichtigt, sodass ich nicht einmal hinfahren musste. Sie haben eine schnelle Bearbeitung und kompetente Mitarbeiter, die sich wirklich um ihre Kunden kümmern. Vielen Dank für den tollen Service, den Gutachterix uns geboten hat - ich empfehle Gutachterix schon jetzt überall weiter ;)'
+    type: text
+    enabled: true
+  -
+    id: m5285qxv
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix hat uns professionell durch den gesamten Prozess begleitet. Angefangen bei der Schadensfeststellung bis hin zur Bezahlung des Schadens wurde uns kundenfreundlich geholfen. Der Sachverständige war immer ansprechbar, falls man Ratschläge oder Informationen brauchte. Wir hätten uns keinen besseren Service von ihm wünschen können.'
+    type: text
+    enabled: true
+  -
+    id: m52860gf
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Der Gutachter von Gutachterix hat das Fahrzeug sehr genau und professionell begutachtet. Die Versicherung des Unfallverursachers hat meinen Schaden ohne Probleme bezahlt.'
+    type: text
+    enabled: true
+  -
+    id: m52866je
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die Organisation war ausgezeichnet. Alles verlief reibungslos, von der telefonischen Terminvereinbarung bis zur Übermittlung des Gutachtens an die gegnerische Versicherung. Der Kfz-Sachverständige von Gutachterix war sogar per Whatsapp für spätere Rückfragen erreichbar.'
+    type: text
+    enabled: true
+  -
+    id: m5286dfy
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Es ist nicht einfach, einen guten Gutachter zu finden. Ich bin froh, dass mein Freund mir von diesem Mann erzählt hat. Der Gutachter war super hilfsbereit, vor allem, weil wir am Wochenende einen Unfall hatten. Er kam am Samstag und die Aufnahme war in einer Stunde erledigt. Machen Sie weiter so!'
+    type: text
+    enabled: true
+  -
+    id: m5286jc0
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Es ist ein super Gutachter-Team hier in München. Hier wird man von Experten geholfen. Unser Kleinwagen wurde von einem größeren SUV im Heckbereich beschädigt. Der Gutachterix-Sachverständige hat den Schaden aufgenommen und uns ausführlich die Schritte erklärt. Wir waren mit dem Service sehr zufrieden und würden Gutachterix immer weiterempfehlen.'
+    type: text
+    enabled: true
+  -
+    id: m5286pzx
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix ist ein erstklassiges Unternehmen für Unfallgutachten. Ich hatte mit unserem Ford Mondeo einen kleinen Autounfall in {{ort}} und musste ein Gutachten für meine Versicherung erstellen lassen. Gutachterix war in der Lage, mir noch am selben Tag, an dem ich sie kontaktierte, einen Kostenvoranschlag zu erstellen.'
+    type: text
+    enabled: true
+  -
+    id: m5286vgl
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich hatte eine großartige Erfahrung mit Gutachterix und Herrn Brunner. Ich hatte einen Autounfall und brauchte ein Unfallgutachten für die Versicherung. Sie waren sehr professionell und ich würde sie auf jeden Fall weiter empfehlen.'
+    type: text
+    enabled: true
+  -
+    id: m5286zhf
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Für ein Gutachten ist man hier genau richtig. Fantastischer Kundenservice. Ich würde den Sachverständigen auf jeden Fall jedem empfehlen, der ein Autogutachten in {{ort}} benötigt.'
+    type: text
+    enabled: true
+  -
+    id: m52874f2
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Uns wurde viel Arbeit abgenommen von Gutachterix und Herr Brunner. Wir selbst mussten uns um nichts kümmern und das Gutachten hat uns geholfen unsere Entschädigung rasch von der Versicherung zu erhalten. Ich würde sie Freunden wärmstens weiterempfehlen.'
+    type: text
+    enabled: true
+  -
+    id: m52878sn
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix war großartig! Sie haben das Gutachten zu meiner vollsten Zufriedenheit erstellt und konnten mir darüber hinaus mit Reparaturtipps helfen. Besser geht’s nicht, macht weiter so! 😊'
+    type: text
+    enabled: true
+  -
+    id: m5287e4u
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich konnte kurzfristig einen Termin zur Begutachtung ausmachen. Der Gutachter Herr Brunner kam pünktlich vorbei und hat sich ohne Zeitdruck Zeit für uns genommen. Herr Brunner erledigte seine Arbeit und stand uns später bei Rückfragen telefonisch mit Rat zur Seite. Herr Brunner, in meinen Augen der beste Sachverständige {{ort}}s!'
+    type: text
+    enabled: true
+  -
+    id: m5287kw0
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Klare Weiterempfehlung von meiner Seite aus. Der Schadenfall wurde reibungslos abgewickelt.'
+    type: text
+    enabled: true
+  -
+    id: m5287q3g
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir selbst haben Gutachterix durch meinen Cousin weiterempfohlen bekommen. Auch wir haben beste Erfahrung mit Herrn Brunner gemacht. Ein sehr kompetenter Gutachter, welcher sich intensiv mit Auto und Kunde beschäftigt und den Schadenfall und das weitere Vorgehen auch für ratlose Kunden verständlich erklärt.'
+    type: text
+    enabled: true
+  -
+    id: m5287unj
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix wurde uns von meinem Verwandten empfohlen. Sie haben uns geholfen, nachdem wir nicht weiter wussten was nach dem Autounfall zu tun ist. Ein sehr fähiger Gutachter, der Auto- und Kundenprobleme versteht und verständlich darauf eingeht. Ein sehr guter Kfz-Gutachter aus {{ort}}.'
+    type: text
+    enabled: true
+  -
+    id: m5287zkz
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir waren in einen Autounfall mit zwei weiteren Fahrzeugen in der %%ort_adjektiv%% Innenstadt verwickelt und haben einen Gutachter gesucht, der den Schaden begutachten kann. Wir bekamen am selben Tag noch einen Termin und es lief alles wie am Schnürchen. Sie haben uns viele Kopfscherzen erspart, denn wir mussten um uns nichts weiteres kümmern.'
+    type: text
+    enabled: true
+  -
+    id: m52885vy
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich bin absoluter Fan von Gutachterix. Ich habe mittlerweile meinen zweiten Schaden von Gutachterix begutachten lassen.'
+    type: text
+    enabled: true
+  -
+    id: m5288ca9
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix ist der Beste für Unfallgutachten. Ich hatte einen ziemlich schweren Autounfall an der Kreuzung Müllerstr./Kellerstr. und musste danach mein Auto auf Schäden untersuchen lassen. Gutachterix war in der Lage, mir sofort und fachkundig zu helfen. Ich würde ihre Dienste auf jeden Fall jedem empfehlen, der sie benötigt.'
+    type: text
+    enabled: true
+  -
+    id: m5288igl
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Der Arbeitskollege, der mir Gutachterix als Gutachterunternehmen empfohlen hatte, hat genauso wie ich, ausschließlich positive Erfahrung mit Gutachterix gemacht. Wenn jemand auf der Suche nach einem zuverlässigen und vertrauenswürdigen Kfz Gutachter ist, ist Gutachterix die Nummer 1 Wahl.'
+    type: text
+    enabled: true
+  -
+    id: m5288mbe
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Mit Gutachterix kann man darauf vertrauen, einen echten %%ort_adjektiv%% Fachmann gefunden zu haben. Sehr praktisch fand ich, dass ich nirgends hinfahren brauchte, da der Gutachterix-Gutachter das Auto in unserer Garage begutachtet hatte. Guter Kundenservice!'
+    type: text
+    enabled: true
+  -
+    id: m5288utw
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich hatte einen Autounfall in der Müllerstr. und brauchte schnell ein Gutachten. Gutachterix erledigte den Auftrag wieder prompt und ohne Probleme. Ich habe Gutachterix sowohl für meine privaten als auch für meine geschäftlichen Fahrzeuge in Anspruch genommen und war immer sehr zufrieden mit dem Service. Sehr zu empfehlen.'
+    type: text
+    enabled: true
+  -
+    id: m5288wlk
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich vergebe 10/10 Punkte für das Team von Gutachterix. Ich wurde von einem ausparkenden Fahrzeug getroffen und suchte einen Schadengutachter aus {{ort}} – und fand glücklicherweise Gutachterix. Von der Terminvereinbarung bis zur Auszahlung der Versicherung lief (dank Gutachterix) alles problemlos ab.'
+    type: text
+    enabled: true
+  -
+    id: m52895fm
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wenn Sie ein Kfz-Gutachten benötigen, sind Sie bei Gutachterix an der richtigen Adresse. Sie haben einen unglaublich hilfsbereiten Kundenservice und ich würde sie auf jeden Fall jedem weiterempfehlen, der ein Autogutachten benötigt.'
+    type: text
+    enabled: true
+  -
+    id: m52899t6
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die Leute bei Gutachterix sind sehr kompetent, freundlich und hilfsbereit. Alles lief sehr reibungslos und professionell ab.'
+    type: text
+    enabled: true
+  -
+    id: m5289ehy
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich war sehr zufrieden mit der Arbeit von Gutachterix. Sie waren in der Lage, superschnell zu meinem Auto zu kommen, und haben mich auch zur Arbeit gefahren, da mein Fahrzeug nicht mehr fahrtüchtig war.'
+    type: text
+    enabled: true
+  -
+    id: m5289jg9
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Liefert sehr gute Arbeit. Arbeitet fix und sehr sorgfältig. Wir würden jederzeit nochmal hier hingehen.'
+    type: text
+    enabled: true
+  -
+    id: m5289og4
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die Gutachter von Gutachterix sind immer freundlich und hilfsbereit bei Fragen und verfügen über ein großes Wissen, wenn es um KFZ-Bewertungen geht. Sie sind immer professionell und kompetent in ihrer Arbeit.'
+    type: text
+    enabled: true
+  -
+    id: m5289str
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich habe mich nach einem kleinen Parkschaden in der Kaufingerstr. an Gutachterix gewandt, und sie haben mir sofort einen Termin gegeben. Der Gutachter hat den Schaden freundlich und kompetent begutachtet. Das Gutachten wurde bereits am nächsten Tag fertig und ich war mit dem Ergebnis sehr zufrieden.'
+    type: text
+    enabled: true
+  -
+    id: m5289yrd
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Der Gutachterservice von Gutachterix war großartig und hat mir geholfen, den Stress mit meiner Versicherungsgesellschaft bezüglich meines Entschädigungsanspruchs zu verringern. Der Gutachter war bei seiner Schadenbesichtigung sehr sorgfältig, was ich sehr schätzte.'
+    type: text
+    enabled: true
+  -
+    id: m528a45t
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich war mit der Arbeit vom Gutachterix-Gutachter sehr zufrieden. Er nahm sich die Zeit für die Fahrzeugbesichtigung und um offene Fragen zu beantworten. Die Arbeit wurde gut und professionell erledigt. Ich war übertrieben zufrieden mit dem Gutachter.'
+    type: text
+    enabled: true
+  -
+    id: m528a93w
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die Mitarbeiter von Gutachterix sind sehr nett und haben mich hervorragend beraten. Ich kann sie ohne Einschränkungen empfehlen.'
+    type: text
+    enabled: true
+  -
+    id: m528ae4h
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sehr flexible Terminfindung und sehr gute Arbeit. Da ich wegen meiner Arbeit nur abends Zeit habe, hat mir die Dame vom Empfang sogar abends einen Termin angeboten.'
+    type: text
+    enabled: true
+  -
+    id: m528ai2x
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Viel besser als das Versicherungsgutachten! Gerne wieder! Der Service war professionell!'
+    type: text
+    enabled: true
+  -
+    id: m528amka
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix wurde mir von einem Freund empfohlen. Innerhalb eines Tages kam er zum Unfallfahrzeug, erstellte das Gutachten und schickte mir umgehend das fertige Gutachten. Eine absolute Weiterempfehlung von mir.'
+    type: text
+    enabled: true
+  -
+    id: m528arzn
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Da ich schnell ein Gutachten für mein Auto brauchte, war ich froh, dass Herr Brunner von Gutachterix mich noch am selben Tag besuchen konnte. Er hat alle meine Fragen freundlich beantwortet, und das Gutachten war am nächsten Abend fertig. Sollte ich in Zukunft wieder ein Gutachten für ein Auto in {{ort}} benötigen, wäre er meine erste Wahl.'
+    type: text
+    enabled: true
+  -
+    id: m528ax3y
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die Mannschaft von Gutachterix ist selbst am Wochenende für einen erreichbar. Da muss man sich um nichts kümmern, die Abwicklung mit der Versicherung wurde von einem Anwalt übernommen.'
+    type: text
+    enabled: true
+  -
+    id: m528b11w
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir hatten einen kleinen Verkehrsunfall in {{ort}} und haben erst einen Gutachter gebraucht, der den Schaden an unserem Ford begutachtet. Wir haben Gutachterix gefunden und damit einen echten Glückstreffer gelandet, denn der Gutachter kam schnell und kostenfrei zu uns und nahm uns die ganze Arbeit zu unserer vollsten Zufriedenheit ab.'
+    type: text
+    enabled: true
+  -
+    id: m528b5li
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich bin vom Service restlos begeistert! Jede Frage wurde von Gutachterix {{ort}} kompetent beantwortet und die Kommunikation war sehr kundenfreundlich gestaltet. Der Sachverständige hat sich gewissenhaft und ausreichend Zeit genommen und mich gründlich zum Gutachten beraten. Die anschließende Bearbeitung lief super schnell ab und das Geld kam vollständig von der Versicherung an. Ein großes Lob, ich fühlte mich sehr gut aufgehoben!'
+    type: text
+    enabled: true
+  -
+    id: m528b9ik
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich bedanke mich ganz herzlich für den schnellen Termin und die zuverlässige sowie professionelle Beratung. Unser Wagen wurde angefahren und noch am selben Tag war der Gutachter bei uns vor Ort. Die Arbeit wurde sorgfältig erledigt und die weitere Vorgehensweise wurde uns sehr detailliert und verständlich erläutert. Ich musste mich um nichts mehr kümmern und habe mich gut aufgehoben gefühlt. Gerne wieder!'
+    type: text
+    enabled: true
+  -
+    id: m528bebs
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Kurzfristig einen Termin bekommen, bestens beraten und Geld von der Versicherung vollständig erhalten. Alle Fragen wurden kompetent und auch für mich als Laien verständlich beantwortet und das Gutachten professionell erstellt. Durch Unterstützung von Gutachterix konnte der entstandene Schaden zu meiner vollsten Zufriedenheit behoben werden. Danke für den guten Service und die gewissenhafte Arbeit.'
+    type: text
+    enabled: true
+  -
+    id: m528bkbk
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich habe ein Schadengutachten benötigt und zeitnah einen Termin für eine Begutachtung des Wagens in München bekommen. Der Sachverständige war sehr kompetent und hat mir alles bis ins kleinste Detail erklärt. Offene Fragen wurden mit ebenfalls verständlich und sympathisch beantwortet. Insgesamt eine professionelle Arbeit mit zufriedenstellendem Ergebnis. Ich komme gerne wieder auf Sie zurück!'
+    type: text
+    enabled: true
+  -
+    id: m528boox
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'TOP! Wir sind mit der Arbeit von Gutachterix sehr zufrieden. Die Prüfung unseres Unfallschadens wurde fachmännisch und gründlich in kürzester Zeit durchgeführt. Auch der Service ist nur zu empfehlen, bei Fragen haben wir immer schnelle und hilfreiche Antworten erhalten. Innerhalb von drei Tagen war das Gutachten bereits fertiggestellt und die Versicherung hat uns die volle Summe ausgezahlt. Sollten wir noch einmal ein Gutachten benötigen, dann werden wir uns gerne wieder an Gutachterix wenden!'
+    type: text
+    enabled: true
+  -
+    id: m528btta
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sehr schneller und hervorragender Service. Wir haben noch am selben Tag des Unfalles einen Termin bei Gutachterix bekommen und alle haben sich gut um uns und unseren Wagen gekümmert. Der Gutachter kam direkt vorbei, hat alle wichtigen Daten aufgenommen und uns ungeklärte Fragen verständlich beantwortet. Die Gutachtenerstellung hat reibungslos funktioniert und wir haben das Geld von der Versicherung in vollem Umfang erhalten. Eine klare Weiterempfehlung!'
+    type: text
+    enabled: true
+  -
+    id: m528byf8
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Nach einem Verkehrsunfall war ich auf der Suche nach einem Kfz-Gutachter in {{ort}} und habe direkt einen Termin bei Gutachterix bekommen. Das gesamte Team war sehr freundlich und kompetent und der Gutachter hat mein Fahrzeug sorgfältig begutachtet. Anschließend wurde ich rund um das Thema Schadenregulierung umfassend beraten. Das Schadengutachten selbst wurde mir bereits am nächsten Tag per E-Mail zugesandt. Es lief alles unkompliziert ab und das Geld für den entstandenen Schaden habe ich zügig erhalten. Danke für den guten Service!'
+    type: text
+    enabled: true
+  -
+    id: m528c5bk
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Die Gutachter von Gutachterix waren freundlich, hilfsbereit und professionell und haben mich sehr gut beraten. Das Team hat alles in die Hand genommen, sodass wir uns um nichts kümmern brauchten. Am selben Abend hatten wir schon das Gutachten und auch unsere Rückfragen wurden sehr schnell beantwortet. Wir haben den Schaden komplett reguliert bekommen. Vielen Dank für die gute Zusammenarbeit und zeitnahe Bearbeitung!'
+    type: text
+    enabled: true
+  -
+    id: m528cin7
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: '100% weiter zu empfehlen! Gutachterix hat uns super beraten und war jederzeit ansprechbar für uns. Sowohl die Terminvereinbarung als auch die Begutachtung verliefen schnell und unkompliziert. Der Sachverständige aus {{ort}} hat sich gewissenhaft und ausreichend Zeit für uns genommen und ein detailliertes Gutachten erstellt. Offene Fragen wurden fachmännisch beantwortet, sodass wir alles auf Anhieb verstanden haben. Wir würden den Kfz-Sachverständigen jederzeit wieder in Anspruch nehmen.'
+    type: text
+    enabled: true
+  -
+    id: m528cnxt
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Nach dem Autounfall hat sich das Team von Gutachterix super um mich gekümmert und kompetent beraten. Noch am selben Tag kam der Sachverständige vorbei und hat Fotos gemacht. Alle Schritte wurden ausführlich erklärt und das Schadengutachten detailliert erstellt. Auch der Service ist nur zu empfehlen, alle Mitarbeiter waren freundlich, hilfsbereit und haben mir bei sämtlichen Fragen und Problemstellungen weitergeholfen.'
+    type: text
+    enabled: true
+  -
+    id: m528ct8q
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Nachdem mir jemand {{ort}} ins Auto gefahren war, habe ich nach einem kompetenten Kfz-Gutachter gesucht und bin bei Gutachterix gelandet. Ich wurde schnell angenommen und bereits am Abend hat der Sachverständige mein Fahrzeug begutachtet. Alle Mitarbeiter waren sehr zuvorkommend und haben sich viel Zeit für die Beratung und Erklärung offener Fragen genommen. Kundenzufriedenheit und erstklassiger Service werden hier großgeschrieben!'
+    type: text
+    enabled: true
+  -
+    id: m528cyt2
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir sind sehr zufrieden und können das Team von Gutachterix nur weiterempfehlen. Die Mitarbeiter waren jederzeit erreichbar, die Kommunikation lief freundlich ab und alles wurde schnell und einfach geregelt. Keine Frage blieb unbeantwortet und bereits nach kürzester Zeit war das Gutachten fertig. Mehr kann man sich hier nicht wünschen.'
+    type: text
+    enabled: true
+  -
+    id: m528d388
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sehr kompetenter Service. Ich konnte kurzfristig einen Termin {{ort}} vereinbaren und wurde durchweg freundlich empfangen. Das Team ist absolut kundenorientiert, fachkundig und hilfsbereit. Ich brauchte mich um nichts kümmern und mir wurde auch direkt ein Kontakt zu einem guten Rechtsanwalt übermittelt.'
+    type: text
+    enabled: true
+  -
+    id: m528d6t8
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Klare Empfehlung für Gutachterix. Wir wurden durch den Schadenfall sehr engagiert begleitet und von der Schadenaufnahme bis zu Regulierung kompetent unterstützt. Der Sachverständige hat sich viel Zeit genommen und ein umfassendes Gutachten für uns erstellt. Bereits wenige Tage später haben wir den ausführlichen Gutachtenbericht für die Versicherung erhalten, die den Totalschaden vollständig beglichen hat.'
+    type: text
+    enabled: true
+  -
+    id: m528dbge
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sehr kompetente Beratung und sorgfältige Arbeit. Ich habe sofort einen Termin bekommen und bereits erste Fragen wurden mir fachkundig und freundlich am Telefon beantwortet. Noch am selben Tag kam der Sachverständige vorbei und erstellte nach gründlicher Begutachtung meines Fahrzeuges ein Gutachten, das ich bereits kurze Zeit später erhielt. Der Ablauf war wirklich unkompliziert und die Regulierung erfolgte zu meiner vollsten Zufriedenheit. Überaus professionell und kundenorientiert!'
+    type: text
+    enabled: true
+  -
+    id: m528df7f
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Meine Erfahrung mit Gutachterix war durchweg positiv. Ich habe zeitnah einen Termin benötigt und wurde schon beim Erstgespräch kompetent aufgenommen. Binnen 24 Stunden war der Sachverständige bei uns vor Ort und hat sämtliche Schäden dokumentiert. Das gesamte Team hat mich bei der Schadenbewertung unterstützt und mir bei Fragen mit fachkundigem Wissen weitergeholfen. Das Gutachten wurde innerhalb kürzester Zeit erstellt. Vielen Dank für die Hilfe und die ausgesprochen freundliche Beratung.'
+    type: text
+    enabled: true
+  -
+    id: m528dixt
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Auf der Suche nach einem guten Kfz-Gutachter wurde mir Gutachterix von einer Bekannten empfohlen. Nach meinem Anruf war der Sachverständige sehr schnell vor Ort und stand mir auch nach der Besichtigung meines Fahrzeuges helfend zur Seite. Spezifische Fachfragen wurden mir verständlich beantwortet und der gesamte Ablauf war unkompliziert und transparent. Ich habe mich sehr wohl gefühlt und war vollends zufrieden mit seiner Arbeit.'
+    type: text
+    enabled: true
+  -
+    id: m528dms0
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Gutachterix hat mich bestens beraten und unterstützt, als ich Probleme mit der gegnerischen Versicherung hatte. Das gesamte Team zeigte eine große Hilfsbereitschaft und war in allen Angelegenheiten zuvorkommend. Die Schadensaufnahme war sehr schnell und unkompliziert und der zuständige Sachverständiger bei Fragen und Problemen jederzeit erreichbar. Die Versicherung konnte dank des Gutachtens überzeugt werden und bezahlte den Schaden in voller Höhe.'
+    type: text
+    enabled: true
+  -
+    id: m528dqo8
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Der Termin für die Begutachtung meines Wagens wurde schnell vereinbart. Mir wurde alles genauestens erklärt und keine Frage blieb offen. Vor Ort in {{ort}} nahm sich der Sachverständige viel Zeit, das Fahrzeug zu begutachten und eine ausführliche Dokumentation zu erstellen. Das Gutachten war innerhalb von zwei Tagen fertiggestellt und ich bin mit dem Ergebnis sehr zufrieden. Die gegnerische Versicherung hat alles akzeptiert und den Schaden anstandslos bezahlt.'
+    type: text
+    enabled: true
+  -
+    id: m528du3d
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Der Termin für die Begutachtung meines Wagens wurde schnell vereinbart. Mir wurde alles genauestens erklärt und keine Frage blieb offen. Vor Ort nahm sich der Sachverständige viel Zeit, das Fahrzeug zu begutachten und eine ausführliche Dokumentation zu erstellen. Das Gutachten war innerhalb von zwei Tagen fertiggestellt und ich bin mit dem Ergebnis sehr zufrieden. Die gegnerische Versicherung hat alles akzeptiert und den Schaden anstandslos bezahlt.'
+    type: text
+    enabled: true
+  -
+    id: m528dya1
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Sofort nach dem Unfall habe ich Gutachterix {{ort}} kontaktiert und eine zeitnahe Terminvergabe erhalten. Der Sachverständige vor Ort hat den Schaden professionell analysiert und alles bis ins kleinste Detail dokumentiert. Ich wurde umfangreich über den Ablauf informiert und bekam das Gutachten schon nach wenigen Tagen. Der Service war kompetent, pünktlich und mit dem nötigen Know-How. Hier steht der Kunde im Vordergrund.'
+    type: text
+    enabled: true
+  -
+    id: m528e1w6
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Ich bin zufrieden mit der professionellen Arbeit von Gutachterix. Bereits am Telefon wurde ich freundlich und kompetent beraten. Auch der Gutachter war gründlich in seiner Untersuchung und hat ein umfassendes Gutachten für mein Fahrzeug geliefert. Auch als ich noch Nachfragen hatte, wurde mir alles fachkundig und verständlich erklärt. Die Betreuung war sehr angenehm und ich habe mich von Anfang an gut aufgehoben gefühlt.'
+    type: text
+    enabled: true
+  -
+    id: m528e5kj
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Mir wurde kompetent und schnell ohne lange Wartezeit geholfen. Bereits kurze Zeit nach meinem Anruf kam der Gutachter zur Prüfung meines Wagens und dokumentierte alles mit größter Sorgfalt. Ich wurde umfassend über das weitere Vorgehen aufgeklärt und konnte auch bei Nachfragen immer jemanden bei Gutachterix erreichen. Die Abwicklung meines Kfz Schadens erfolgte zeitnah und professionell ohne Beanstandung. Hervorragender Service, weiter so!'
+    type: text
+    enabled: true
+  -
+    id: m528e9xf
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Wir hatten einen fremdverschuldeten Autounfall in {{ort}} und bekamen eine professionelle Beratung und Unterstützung durch Gutachterix über den gesamten Prozess hinweg. Noch am selben Tag unserer Kontaktaufnahme bekamen wir einen Termin vor Ort zur Begutachtung und der Gutachter leistete sorgfältige Arbeit. Bereits kurze Zeit später lag das umfangreiche Gutachten vor – einfach klasse! Der Service war ebenfalls sehr kompetent, reaktionsschnell und sympathisch zugleich, auf alle Fragen gingen die Mitarbeiter ausführlich ein.'
+    type: text
+    enabled: true
+  -
+    id: m528edcw
+    richtext:
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Mir ist jemand in mein Auto geknallt und ich benötigte ein Gutachten für meinen Schadenersatz. Ich habe sofort einen Termin bei Gutachterix bekommen und wurde von einem freundlichen und kompetenten Team bestens beraten. Die Schadensbesichtigung erfolgte in kürzester Zeit und das Gutachten wurde detailreich erstellt. Ich bin von der Professionalität und Kenntnisse der Mitarbeiter beeindruckt und würde mir hier jederzeit wieder Unterstützung bei einem Gutachten holen.'
+    type: text
+    enabled: true

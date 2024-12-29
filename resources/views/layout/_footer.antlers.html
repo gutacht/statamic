@@ -4,28 +4,33 @@
 #}}
 
 <!-- /layout/_footer.antlers.html -->
-<footer class="fluid-grid py-4 mt-auto">
-    <div class="span-content flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
-        <div class="flex flex-col gap-4 md:flex-row text-xs font-bold">
-            <span>
-                &copy; {{ configuration:copyright_since }}
-                {{ unless (now | format('Y')) == configuration:copyright_since }}
-                    - {{ now | format('Y') }}
-                    {{ /unless }}
-                {{ configuration:copyright_name ?? config:app:name }}
-            </span>
+{{ partial:page_builder/block as="footer" class="text-white bg-gray bg-black [&_a]:underline [&_a:hover]:no-underline" }}
+    {{ partial:components/grid width="280px" }}
+        <div class="flex sm:order-1 flex-col gap-4 items-start">
+            {{ svg src="svg/logo" height="50px" class="[&_*]:fill-white [&_path:last-child]:hidden" }}
 
-            {{# Let's users reset consent when you use the consent banner. #}}
-            {{ yield:reset_consent }}
+            <div class="flex flex-col gap-1">
+                <a href="mailto:{{ contact:email }}">{{ contact:email }}</a>
+                <a href="tel:{{ contact:phone }}">{{ contact:phone }}</a>
+                <a href="tel:{{ contact:mobile }}">{{ contact:mobile }}</a>
+            </div>
+
+            <div class="flex flex-wrap gap-x-4">
+                <span>Copyright {{ now | format('Y') }}. All Rights Reserved</span>
+
+                {{ yield:reset_consent }}
+            </div>
         </div>
 
-        {{ if social_media:social_media }}
-            <div class="flex gap-x-2">
-                {{ social_media:social_media }}
-                    <a class="text-neutral" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src="type" attr:class="w-3 h-3 overflow-visible fill-current" attr:alt="" attr:aria-hidden="true" }}</a>
-                {{ /social_media:social_media }}
-            </div>
-        {{ /if }}
-    </div>
-</footer>
+        <nav class="flex flex-wrap sm:order-3 gap-y-2 gap-x-4 font-semibold lg:justify-end items-end">
+                {{ nav:footer }}
+                    <a href="{{ url }}" class="{{ !inline ?= 'w-full lg:text-right' }}">{{ title }}</a>
+                {{ /nav:footer }}
+        </nav>
+
+        <div class="flex items-end sm:order-2 sm:justify-center">
+            {{ partial:components/image image="/images/plagiat-banner.png" class="max-w-[300px]" }}
+        </div>
+    {{ /partial:components/grid }}
+{{ /partial:page_builder/block }}
 <!-- End: /layout/_footer.antlers.html -->

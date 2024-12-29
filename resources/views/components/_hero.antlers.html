@@ -7,7 +7,7 @@
 <!-- /page_builder/_hero.antlers.html -->
 {{ if page:collection == 'locations' }}
     {{ partial:page_builder/block as="header" }}
-        <div class="flex flex-col justify-center span-content lg:flex-row gap-4">
+        <div class="flex flex-col justify-center lg:flex-row gap-4">
             <div class="lg:w-2/3">
                 {{ partial:components/image :image="hero:image" cover="true" class="h-full" }}
             </div>
@@ -21,9 +21,9 @@
     {{ /partial:page_builder/block }}
 {{ else }}
     {{ partial:page_builder/block as="header" }}
-        {{ partial:components/image :image="hero:image" cover="true" class="row-start-1 h-[550px]" }}
+        {{ partial:components/image :image="hero:image" cover="true" class="no-content row-start-1 h-[550px]" }}
 
-        <div class="flex flex-col row-start-1 justify-center gap-4 span-content">
+        <div class="flex flex-col row-start-1 justify-center gap-4">
             {{ partial:typography/heading :heading="hero:heading" as="h1" class="text-white bg-opacity p-6 w-fit" }}
 
             {{ partial:components/contact/list layout="hero" }}

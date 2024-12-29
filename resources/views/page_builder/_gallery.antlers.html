@@ -1,0 +1,30 @@
+{{#
+    @name Galerie
+    @desc Display one or multiple images in a grid.
+    @set page.page_builder.gallery
+#}}
+
+<!-- /page_builder/_gallery.antlers.html -->
+{{ partial:page_builder/block class="{ images|count == 4 ?= 'bg-gray' } { images:2:stretch ?= 'no-space-b' }" }}
+    {{ partial:typography/heading center="true" }}
+
+    {{ partial:typography/richtext :richtext="before_richtext|raw" class="text-center" }}
+
+    {{ if images|count == 1 }}
+        {{ partial:components/image :image="images:0:image" class="no-content span-lg" }}
+    {{ else }}
+        {{ partial:components/grid width="{ images:2:stretch ? '384px' : '240px' }" gap="gap-4" }}
+            {{ images }}
+                {{ partial:components/image
+                    class="
+                        { stretch && index == 2 ?= 'flex items-end md:row-span-2 md:col-start-2 md:row-start-1' }
+                        { next:stretch && index == 1 ?= 'md:col-start-1' }
+                    "
+                }}
+            {{ /images }}
+        {{ /partial:components/grid }}
+    {{ /if }}
+
+    {{ partial:typography/richtext class="text-center" }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_gallery.antlers.html -->

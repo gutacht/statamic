@@ -8,7 +8,11 @@
     <input
         x-model="form.{{ handle }}"
         @change="form.validate('{{ handle }}')"
-        class="mr-2 inline-flex rounded border-neutral focus:border-primary text-primary"
+        :class="{
+            'border-red-600 focus:border-red-600 !outline-red-600/50': form.invalid('{{ handle }}'),
+            'border-light focus:border-primary': !form.invalid('{{ handle }}')
+        }"
+        class="mr-2 inline-flex rounded text-primary"
         type="checkbox"
         name="{{ handle }}"
         value="1"

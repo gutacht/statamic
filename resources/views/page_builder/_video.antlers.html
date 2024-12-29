@@ -1,0 +1,24 @@
+{{#
+    @name Video
+    @desc A video embed section.
+    @set page.page_builder.video
+#}}
+
+<!-- /page_builder/_video.antlers.html -->
+{{ partial:page_builder/block class="bg-gray" }}
+    {{ partial:components/grid width="400px" }}
+        <div class="flex flex-col justify-center gap-4">
+            {{ partial:typography/heading }}
+            {{ partial:typography/richtext }}
+        </div>
+
+        {{ partial:components/consent_gate }}
+            {{ if embed|is_embeddable }}
+                <iframe src="{{ embed|embed_url }}" class="w-full min-h-[333px]"></iframe>
+            {{ else }}
+                <video src="{{ embed|embed_url }}"></video>
+            {{ /if }}
+        {{ /partial:components/consent_gate }}
+    {{ /partial:components/grid }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_video.antlers.html -->

@@ -18,7 +18,8 @@ export default defineConfig(({ command, mode }) => {
                 refresh: true,
                 input: [
                     'resources/css/site.css',
-                    'resources/js/site.js'
+                    'resources/js/site.js',
+                    'resources/js/cp.js'
                 ]
             })
         ],

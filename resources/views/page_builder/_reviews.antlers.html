@@ -1,0 +1,43 @@
+{{#
+    @name Reviews
+    @desc Static or dynamic reviews.
+    @set page.page_builder.reviews
+#}}
+
+<!-- /page_builder/_reviews.antlers.html -->
+{{ partial:page_builder/block }}
+    {{ partial:typography/heading center="true" }}
+
+    {{ partial:components/grid width="320px" gap="gap-x-0 gap-y-8" }}
+        {{ grid }}
+            <div itemscope itemtype="https://schema.org/Review" class="flex gap-4">
+                {{ svg src="svg/quote" class="shrink-0 fill-primary" }}
+
+                <div class="flex flex-col gap-2">
+                    <div class="font-semibold leading-5">
+                        <div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                            <span itemprop="name">
+                                {{ name }}
+                            </span>
+                        </div>
+
+                        {{ partial:typography/heading as="div" }}
+                    </div>
+
+                    <div itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+                        <div class="flex" itemprop="ratingValue" content="5">
+                            <div class="text-2xl text-[#f0ad4e]">★</div>
+                            <div class="text-2xl text-[#f0ad4e]">★</div>
+                            <div class="text-2xl text-[#f0ad4e]">★</div>
+                            <div class="text-2xl text-[#f0ad4e]">★</div>
+                            <div class="text-2xl text-[#f0ad4e]">★</div>
+                        </div>
+                    </div>
+
+                    {{ partial:typography/richtext }}
+                </div>
+            </div>
+        {{ /grid }}
+    {{ /partial:components/grid }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_reviews.antlers.html -->

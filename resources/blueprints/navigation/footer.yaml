@@ -1,0 +1,12 @@
+tabs:
+  main:
+    display: Hauptteil
+    sections:
+      -
+        fields:
+          -
+            handle: inline
+            field:
+              type: toggle
+              display: Inline
+              localizable: false

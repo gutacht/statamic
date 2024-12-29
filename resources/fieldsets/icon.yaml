@@ -6,5 +6,5 @@ fields:
       type: icon
       display: Icon
       localizable: false
-      directory: public/icons
+      directory: public/svg
       replicator_preview: false

@@ -1,5 +1,6 @@
 ---
 class: null
+style: null
 ---
 
 {{#
@@ -9,7 +10,7 @@ class: null
 #}}
 
 <!-- /components/_image.antlers.html -->
-<figure class="{{ cover ? 'span-full' : 'span-content' }} {{ view:class }}">
+<figure class="{{ cover ?= 'span-full' }} {{ view:class }}" style="{{ view:style }}">
     {{
         partial:statamic-peak-tools::components/picture
         :$image

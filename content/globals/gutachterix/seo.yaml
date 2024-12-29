@@ -23,5 +23,9 @@ use_plausible: false
 use_cloudflare_web_analytics: false
 tracker_type: none
 use_consent_banner: true
-embeds: false
+embeds: true
+embed_services:
+  - YouTube
+  - 'Google Maps'
+hide_by_default: false
 display_style: left

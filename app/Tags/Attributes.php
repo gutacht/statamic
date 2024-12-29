@@ -17,7 +17,7 @@ class Attributes extends Tags
 
         return collect($this->context->get('view', []))
             ->except($except)
-            ->filter(fn ($value, $key) => Str::startsWith($key, ['data-', 'x-']))
+            ->filter(fn ($value, $key) => Str::startsWith($key, ['data-', 'x-', '@']))
             ->map(fn ($value, $key) => $key . '="' . $value . '"')
             ->join(' ');
     }

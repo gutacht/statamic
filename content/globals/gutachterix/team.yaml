@@ -1,0 +1,275 @@
+members:
+  -
+    id: m53qubgl
+    image: team/team-fabian.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Fabian
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Bachelor Engineering'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true
+  -
+    id: m53r39dw
+    image: team/team-malik.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Malik
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Bachelor Engineering'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true
+  -
+    id: m53r6yx2
+    image: team/team-stephan.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Stephan
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Dipl. Ing (FH)'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true
+  -
+    id: m53r7cll
+    image: team/team-ivan.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Ivan
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Spezialist für LKW und Baumaschinen'
+    type: member
+    enabled: true
+  -
+    id: m53r7v0e
+    image: team/team-norbert.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Norbert
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Spezialist für Wohnmobile und -wagen'
+    type: member
+    enabled: true
+  -
+    id: m53r8bfy
+    image: team/team-stefan.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Stefan
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Dipl. Ing (FH)'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Spezialist für Motorräder'
+    type: member
+    enabled: true
+  -
+    id: m53r8qvv
+    image: team/team-francesco.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Francesco
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Spezialist für Omnibusse und Nutzfahrzeuge'
+    type: member
+    enabled: true
+  -
+    id: m53r95ak
+    image: team/team-frank.jpeg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Frank
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Dipl. Ing.'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Spezialist für Oldtimer & Youngtimer'
+    type: member
+    enabled: true
+  -
+    id: m53r9h5c
+    image: team/autor-peter.jpg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Peter
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Dipl. Ing. (FH)'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true
+  -
+    id: m53r9vwg
+    image: team/autor-thomas-bg-neutral-sw.png
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Thomas
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'M. Eng.'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true
+  -
+    id: m53ra8v4
+    image: team/ingo.jpg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Ingo
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Dipl. Ing. (FH)'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true
+  -
+    id: m53rardh
+    image: team/team-joern.jpg
+    heading:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: Jörn
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Dipl. Ing.'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: Kfz-Gutachter
+    type: member
+    enabled: true

@@ -27,6 +27,7 @@ fields:
       display: Fließtext
       localizable: true
       collapse: true
+      antlers: true
       sets:
         text:
           display: Text

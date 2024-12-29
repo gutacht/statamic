@@ -3,8 +3,10 @@
 	@desc A grid of ranks.
 #}}
 
+<!-- /page_builder/_podium.antlers.html -->
 {{ partial:page_builder/block }}
     {{ partial:typography/heading }}
+
     {{ partial:typography/richtext }}
 
     {{ partial:components/grid width="330px" gap="gap-2" }}
@@ -31,18 +33,18 @@
 
                     <div class="row-start-1 span-full flex flex-col gap-2 h-full items-center justify-end bg-[#00000080]">
                         {{ if index == 0 }}
-                            {{ svg src="icons/misc/thumbs-up" width="80px" height="80px" class="fill-success" }}
+                            {{ svg src="svg/thumbs-up" width="80px" height="80px" class="fill-success" }}
                         {{ else }}
-                            {{ svg src="icons/misc/thumbs-down" width="80px" height="80px" class="fill-error" }}
+                            {{ svg src="svg/thumbs-down" width="80px" height="80px" class="fill-error" }}
                         {{ /if }}
 
                         {{ partial:typography/heading
-                            as="h3"
+                            as="div"
                             class="
-                                text-center text-white
+                                text-center text-white font-semibold [&_strong]:text-[1.375rem]
                                 {{ switch(
                                     (index == 0) => '[&_strong]:text-success',
-                                    (index > 0) => '[&_strong]:text-error'
+                                    (index > 0) => '[&_strong]:!text-error'
                                 ) }}
                             "
                         }}
@@ -62,5 +64,6 @@
         {{ /grid }}
     {{ /partial:components/grid }}
 
-    {{ partial:components/accordion up="true" class="span-content items-center [&>div]:gap-6 [&_button]:button" }}
+    {{ partial:components/accordion up="true" class="items-center [&>div]:gap-6 [&_button]:button" }}
 {{ /partial:page_builder/block }}
+<!-- End: /page_builder/_podium.antlers.html -->

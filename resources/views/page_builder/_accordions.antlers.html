@@ -1,0 +1,31 @@
+{{#
+	@name Accordions
+	@desc List of accordions with richtext content.
+#}}
+
+<!-- /page_builder/_accordions.antlers.html -->
+{{ partial:page_builder/block }}
+    {{ partial:typography/heading }}
+
+    {{ partial:typography/richtext }}
+
+    <div class="gap-3 flex flex-col">
+        {{ accordions }}
+            {{ partial:components/accordion
+                class="
+                    flex w-full
+                    [&_button]:flex [&_button]:w-full [&_button]:items-center [&_button]:gap-4 [&_button]:bg-[#464646] [&_button]:p-4 [&_button]:font-bold [&_button]:text-white [&_button]:font-display
+                    [&_article]:p-4 [&_article]:pb-1 [&_article]:w-full
+                "
+            }}
+                {{ slot:button }}
+                    {{ svg src="svg/plus" x-show="!expanded" width="16px" height="16px" class="fill-primary" }}
+                    {{ svg src="svg/minus" x-show="expanded" width="16px" height="16px" class="fill-primary" }}
+
+                    {{ title }}
+                {{ /slot:button }}
+            {{ /partial:components/accordion }}
+        {{ /accordions }}
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_accordions.antlers.html -->

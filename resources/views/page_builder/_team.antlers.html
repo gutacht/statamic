@@ -1,0 +1,27 @@
+{{#
+    @name Team
+    @desc Carousel or grid of team members.
+    @set page.page_builder.team
+#}}
+
+<!-- /page_builder/_team.antlers.html -->
+{{ partial:page_builder/block }}
+    {{ partial:typography/heading center="true" }}
+
+    {{ if page:id == 'home' }}
+        {{ partial:components/carousel/slider class="[&_svg]:text-primary" }}
+            {{ team:members }}
+                {{ partial:components/carousel/slide spacing="px-4" width="w-full xs:w-1/2 md:w-1/3 lg:w-1/4" class="flex flex-col gap-2" }}
+                    {{ partial:components/image class="rounded-full overflow-hidden" }}
+
+                    {{ partial:typography/heading as="div" class="[&_strong]:text-neutral w-full text-center" }}
+                {{ /partial:components/carousel/slide }}
+            {{ /team:members }}
+        {{ /partial:components/carousel/slider }}
+    {{ else }}
+        {{ partial:components/grid }}
+            Grid
+        {{ /partial:components/grid }}
+    {{ /if }}
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_team.antlers.html -->

@@ -8,4 +8,4 @@ fields:
       display: Bild
       show_filename: true
       width: 100
-      replicator_preview: false
+      replicator_preview: true

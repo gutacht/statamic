@@ -37,7 +37,7 @@ class: null
                 <span x-show="expanded">{{ accordion:button_close }}</span>
             {{ /if }}
         </button>
-        {{ accordion:richtext|raw|dump }}
+
         {{ partial:typography/richtext richtext="{accordion:richtext|raw or richtext|raw}" x-show="expanded" x-collapse="" }}
     </div>
 </div>

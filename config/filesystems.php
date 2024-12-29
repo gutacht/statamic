@@ -51,10 +51,10 @@ return [
             'throw' => false,
         ],
 
-        'icons' => [
+        'svg' => [
             'driver' => 'local',
-            'root' => public_path('icons'),
-            'url' => '/icons',
+            'root' => public_path('svg'),
+            'url' => '/svg',
             'visibility' => 'public',
         ],
 

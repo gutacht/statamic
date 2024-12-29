@@ -1,3 +1,7 @@
+---
+class: null
+---
+
 {{#
     @name Grid
     @desc Forms a responsive grid with a min-width for every item before it breaks to a new line.
@@ -10,8 +14,8 @@
         class="
             grid
             grid-cols-[repeat(auto-fit,minmax(min(var(--min-width),100%),1fr))]
-            {{ span or 'span-content' }}
             {{ gap or 'gap-6' }}
+            {{ view:class }}
         "
         style="--min-width: {{ width or '240px' }};"
     >
